@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Aula 1 – Programação Aplicada a Engenharia de Agrimensura e Cartográfica</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Aula 1</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./logo_labfsr.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./logo_labfsr.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lógica-de-programação-com-python" id="toc-lógica-de-programação-com-python" class="nav-link active" data-scroll-target="#lógica-de-programação-com-python">🗺️ Lógica de Programação com Python</a>
+  <ul class="collapse">
+  <li><a href="#aplicada-à-engenharia-cartográfica" id="toc-aplicada-à-engenharia-cartográfica" class="nav-link" data-scroll-target="#aplicada-à-engenharia-cartográfica">Aplicada à Engenharia Cartográfica</a>
+  <ul class="collapse">
+  <li><a href="#roteiro-da-aula" id="toc-roteiro-da-aula" class="nav-link" data-scroll-target="#roteiro-da-aula">Roteiro da Aula</a></li>
+  </ul></li>
+  <li><a href="#bloco-1-variáveis-e-tipos-de" id="toc-bloco-1-variáveis-e-tipos-de" class="nav-link" data-scroll-target="#bloco-1-variáveis-e-tipos-de">🧱 BLOCO 1 — Variáveis e Tipos de</a>
+  <ul class="collapse">
+  <li><a href="#tipos-de-dados-fundamentais" id="toc-tipos-de-dados-fundamentais" class="nav-link" data-scroll-target="#tipos-de-dados-fundamentais">Tipos de dados fundamentais</a></li>
+  <li><a href="#boas-práticas-ao-nomear-variáveis" id="toc-boas-práticas-ao-nomear-variáveis" class="nav-link" data-scroll-target="#boas-práticas-ao-nomear-variáveis">📌 Boas práticas ao nomear variáveis</a></li>
+  </ul></li>
+  <li><a href="#bloco-2-operadores-e-expressões" id="toc-bloco-2-operadores-e-expressões" class="nav-link" data-scroll-target="#bloco-2-operadores-e-expressões">➕ BLOCO 2 — Operadores e Expressões</a>
+  <ul class="collapse">
+  <li><a href="#minutos" id="toc-minutos" class="nav-link" data-scroll-target="#minutos">⏱️ ~20 minutos</a></li>
+  <li><a href="#operadores-aritméticos" id="toc-operadores-aritméticos" class="nav-link" data-scroll-target="#operadores-aritméticos">Operadores Aritméticos</a></li>
+  <li><a href="#operadores-de-comparação" id="toc-operadores-de-comparação" class="nav-link" data-scroll-target="#operadores-de-comparação">Operadores de Comparação</a></li>
+  <li><a href="#operadores-lógicos" id="toc-operadores-lógicos" class="nav-link" data-scroll-target="#operadores-lógicos">Operadores Lógicos</a></li>
+  </ul></li>
+  <li><a href="#bloco-3-estruturas-condicionais" id="toc-bloco-3-estruturas-condicionais" class="nav-link" data-scroll-target="#bloco-3-estruturas-condicionais">🔀 BLOCO 3 — Estruturas Condicionais</a>
+  <ul class="collapse">
+  <li><a href="#minutos-1" id="toc-minutos-1" class="nav-link" data-scroll-target="#minutos-1">⏱️ ~20 minutos</a></li>
+  </ul></li>
+  <li><a href="#bloco-4-estruturas-de-repetição-e-listas" id="toc-bloco-4-estruturas-de-repetição-e-listas" class="nav-link" data-scroll-target="#bloco-4-estruturas-de-repetição-e-listas">🔁 BLOCO 4 — Estruturas de Repetição e Listas</a>
+  <ul class="collapse">
+  <li><a href="#minutos-2" id="toc-minutos-2" class="nav-link" data-scroll-target="#minutos-2">⏱️ ~20 minutos</a></li>
+  <li><a href="#listas-armazenando-múltiplos-valores" id="toc-listas-armazenando-múltiplos-valores" class="nav-link" data-scroll-target="#listas-armazenando-múltiplos-valores">Listas — armazenando múltiplos valores</a></li>
+  </ul></li>
+  <li><a href="#bloco-5-funções-e-aplicação-final" id="toc-bloco-5-funções-e-aplicação-final" class="nav-link" data-scroll-target="#bloco-5-funções-e-aplicação-final">🔧 BLOCO 5 — Funções e Aplicação Final</a>
+  <ul class="collapse">
+  <li><a href="#minutos-3" id="toc-minutos-3" class="nav-link" data-scroll-target="#minutos-3">⏱️ ~20 minutos</a></li>
+  </ul></li>
+  <li><a href="#resumo-da-aula" id="toc-resumo-da-aula" class="nav-link" data-scroll-target="#resumo-da-aula">📋 Resumo da Aula</a>
+  <ul class="collapse">
+  <li><a href="#próximos-passos" id="toc-próximos-passos" class="nav-link" data-scroll-target="#próximos-passos">📚 Próximos Passos</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Aula 1</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Básico</div>
+    <div class="quarto-category">CEAC</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="lógica-de-programação-com-python" class="level1">
+<h1>🗺️ Lógica de Programação com Python</h1>
+<section id="aplicada-à-engenharia-cartográfica" class="level2">
+<h2 class="anchored" data-anchor-id="aplicada-à-engenharia-cartográfica">Aplicada à Engenharia Cartográfica</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://colab.research.google.com/github/Alixandrini/ENGJ20/blob/main/Aula%201/logica_programacao_aula1.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
+<figcaption>Open In Colab</figcaption>
+</figure>
+</div>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td><strong>Curso</strong></td>
+<td>Engenharia Cartográfica</td>
+</tr>
+<tr class="even">
+<td><strong>Disciplina</strong></td>
+<td>Introdução à Programação</td>
+</tr>
+<tr class="odd">
+<td><strong>Duração</strong></td>
+<td>1h 40min</td>
+</tr>
+<tr class="even">
+<td><strong>Nível</strong></td>
+<td>Iniciante</td>
+</tr>
+</tbody>
+</table>
+<section id="roteiro-da-aula" class="level3">
+<h3 class="anchored" data-anchor-id="roteiro-da-aula">Roteiro da Aula</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Bloco</th>
+<th>Tema</th>
+<th>Tempo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Variáveis e Tipos de Dados</td>
+<td>20 min</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Operadores e Expressões</td>
+<td>20 min</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Estruturas Condicionais</td>
+<td>20 min</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Estruturas de Repetição</td>
+<td>20 min</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Funções e Aplicação Final</td>
+<td>20 min</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>💡 <strong>Todos os exemplos usam situações reais da Cartografia e do Geoprocessamento!</strong></p>
+</blockquote>
+</section>
+</section>
+<section id="bloco-1-variáveis-e-tipos-de" class="level2">
+<h2 class="anchored" data-anchor-id="bloco-1-variáveis-e-tipos-de">🧱 BLOCO 1 — Variáveis e Tipos de</h2>
+<p>Uma <strong>variável</strong> é um espaço na memória do computador onde armazenamos um valor. Pense em variáveis como <em>etiquetas</em> que colamos em caixas de dados.</p>
+<pre><code>latitude = -23.5505   ← etiqueta "latitude" colada no valor -23.5505</code></pre>
+<section id="tipos-de-dados-fundamentais" class="level3">
+<h3 class="anchored" data-anchor-id="tipos-de-dados-fundamentais">Tipos de dados fundamentais</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Tipo</th>
+<th>Python</th>
+<th>Exemplo Cartográfico</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Inteiro</td>
+<td><code>int</code></td>
+<td>Número de pontos levantados</td>
+</tr>
+<tr class="even">
+<td>Decimal</td>
+<td><code>float</code></td>
+<td>Coordenada geográfica</td>
+</tr>
+<tr class="odd">
+<td>Texto</td>
+<td><code>str</code></td>
+<td>Nome de um município</td>
+</tr>
+<tr class="even">
+<td>Lógico</td>
+<td><code>bool</code></td>
+<td>Ponto dentro da área?</td>
+</tr>
+</tbody>
+</table>
+<div id="68206f37" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.344178Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.344057Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.349704Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.349093Z&quot;}}" data-outputid="141c1f80-3aea-4b51-ce38-3f1eb568c671">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Variáveis do tipo float (ponto flutuante) ──────────────────────────────</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Coordenadas geográficas do Marco Zero de Brasília (Praça dos Três Poderes)</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>latitude  <span class="op">=</span> <span class="op">-</span><span class="fl">12.97</span>   <span class="co"># graus decimais (negativo = Sul)</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>longitude <span class="op">=</span> <span class="op">-</span><span class="fl">38.4767</span>   <span class="co"># graus decimais (negativo = Oeste)</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>altitude  <span class="op">=</span> <span class="fl">45.50</span>     <span class="co"># metros</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Coordenadas do Marco Zero de Brasília"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Latitude :"</span>, latitude,  <span class="st">"graus"</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Longitude:"</span>, longitude, <span class="st">"graus"</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Altitude :"</span>, altitude,  <span class="st">"m"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Coordenadas do Marco Zero de Brasília
+Latitude : -12.97 graus
+Longitude: -38.4767 graus
+Altitude : 45.5 m</code></pre>
+</div>
+</div>
+<div id="7ee9aaf2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.350895Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.350778Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.353410Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.352878Z&quot;}}" data-outputid="7405f754-fa86-4ed6-bf60-0432503ecc4e">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Variáveis do tipo int e str ────────────────────────────────────────────</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>num_pontos   <span class="op">=</span> <span class="dv">48</span>           <span class="co"># int  – pontos levantados em campo</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>datum        <span class="op">=</span> <span class="st">"SIRGAS2000"</span> <span class="co"># str  – sistema de referência geodésico</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>fuso_utm     <span class="op">=</span> <span class="dv">23</span>           <span class="co"># int  – fuso UTM (Brasil central)</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>hemisferio   <span class="op">=</span> <span class="st">"S"</span>          <span class="co"># str  – hemisfério Sul</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Levantamento realizado com"</span>, num_pontos, <span class="st">"pontos"</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Datum:"</span>, datum, <span class="st">"| Fuso UTM:"</span>, fuso_utm, hemisferio)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Levantamento realizado com 48 pontos
+Datum: SIRGAS2000 | Fuso UTM: 23 S</code></pre>
+</div>
+</div>
+<div id="8a71a740" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.354556Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.354439Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.356742Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.356289Z&quot;}}" data-outputid="047d19bf-908d-4f50-dea8-e650cfe3b742">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Variável do tipo bool (lógico) ────────────────────────────────────────</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>dentro_do_brasil <span class="op">=</span> <span class="va">True</span>    <span class="co"># o ponto está dentro do território nacional?</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>tem_sinal_gnss   <span class="op">=</span> <span class="va">False</span>   <span class="co"># havia sinal GNSS no momento do levantamento?</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Ponto dentro do Brasil?"</span>, dentro_do_brasil)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Tinha sinal GNSS?      "</span>, tem_sinal_gnss)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Ponto dentro do Brasil? True
+Tinha sinal GNSS?       False</code></pre>
+</div>
+</div>
+<div id="f8b72898" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.357936Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.357825Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.360169Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.359663Z&quot;}}" data-outputid="7a0c16d1-2af1-4383-c7f1-1c8c060c840e">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Verificando o tipo de uma variável com type() ─────────────────────────</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(latitude))</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(num_pontos))</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(datum))</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">type</span>(dentro_do_brasil))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'float'&gt;
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;
+&lt;class 'bool'&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="boas-práticas-ao-nomear-variáveis" class="level3">
+<h3 class="anchored" data-anchor-id="boas-práticas-ao-nomear-variáveis">📌 Boas práticas ao nomear variáveis</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>✅ Correto</th>
+<th>❌ Errado</th>
+<th>Motivo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>latitude</code></td>
+<td><code>1latitude</code></td>
+<td>não começa com número</td>
+</tr>
+<tr class="even">
+<td><code>num_pontos</code></td>
+<td><code>num pontos</code></td>
+<td>sem espaços</td>
+</tr>
+<tr class="odd">
+<td><code>datum_ref</code></td>
+<td><code>datum-ref</code></td>
+<td>sem hífen</td>
+</tr>
+<tr class="even">
+<td><code>zona_utm</code></td>
+<td><code>zona utm</code></td>
+<td>sem espaços</td>
+</tr>
+</tbody>
+</table>
+<p>Use nomes <strong>descritivos</strong> e em <strong>minúsculas com underline</strong> (<code>snake_case</code>).</p>
+<div id="3fd86ce5" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.361434Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.361323Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.363290Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.362772Z&quot;}}" data-outputid="1f898d08-2fc9-4bf9-c7f4-987390726f88">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── ✏️ Exercício 1 ─────────────────────────────────────────────────────────</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Crie variáveis para descrever uma estação GNSS de sua cidade:</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span><span class="dv">1000</span> <span class="co">#   - nome da estação (str)</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a) <span class="co">#   - latitude       (float)</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   - longitude      (float)</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   - altitude       (float)</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   - está ativa?    (bool)</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Depois imprima todas com print().</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Escreva seu código aqui:</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1000</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="bloco-2-operadores-e-expressões" class="level2">
+<h2 class="anchored" data-anchor-id="bloco-2-operadores-e-expressões">➕ BLOCO 2 — Operadores e Expressões</h2>
+<section id="minutos" class="level3">
+<h3 class="anchored" data-anchor-id="minutos">⏱️ ~20 minutos</h3>
+</section>
+<section id="operadores-aritméticos" class="level3">
+<h3 class="anchored" data-anchor-id="operadores-aritméticos">Operadores Aritméticos</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Operador</th>
+<th>Significado</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>+</code></td>
+<td>Adição</td>
+<td><code>x + y</code></td>
+</tr>
+<tr class="even">
+<td><code>-</code></td>
+<td>Subtração</td>
+<td><code>x - y</code></td>
+</tr>
+<tr class="odd">
+<td><code>*</code></td>
+<td>Multiplicação</td>
+<td><code>x * y</code></td>
+</tr>
+<tr class="even">
+<td><code>/</code></td>
+<td>Divisão (real)</td>
+<td><code>x / y</code></td>
+</tr>
+<tr class="odd">
+<td><code>//</code></td>
+<td>Divisão inteira</td>
+<td><code>x // y</code></td>
+</tr>
+<tr class="even">
+<td><code>%</code></td>
+<td>Resto (módulo)</td>
+<td><code>x % y</code></td>
+</tr>
+<tr class="odd">
+<td><code>**</code></td>
+<td>Potência</td>
+<td><code>x ** y</code></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="operadores-de-comparação" class="level3">
+<h3 class="anchored" data-anchor-id="operadores-de-comparação">Operadores de Comparação</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Operador</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>==</code></td>
+<td>igual a</td>
+</tr>
+<tr class="even">
+<td><code>!=</code></td>
+<td>diferente de</td>
+</tr>
+<tr class="odd">
+<td><code>&gt;</code>, <code>&lt;</code></td>
+<td>maior/menor que</td>
+</tr>
+<tr class="even">
+<td><code>&gt;=</code>, <code>&lt;=</code></td>
+<td>maior/menor ou igual</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="operadores-lógicos" class="level3">
+<h3 class="anchored" data-anchor-id="operadores-lógicos">Operadores Lógicos</h3>
+<p><code>and</code> · <code>or</code> · <code>not</code></p>
+<div id="634233e6" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.364421Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.364261Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.366941Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.366392Z&quot;}}" data-outputid="08e61d00-f0b8-4819-9fbe-a4f50e0fe5db">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Conversão de Graus-Minutos-Segundos (GMS) → Graus Decimais (GD) ───────</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Fórmula:  GD = Graus + Minutos/60 + Segundos/3600</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>graus    <span class="op">=</span> <span class="dv">23</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>minutos  <span class="op">=</span> <span class="dv">32</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>segundos <span class="op">=</span> <span class="fl">48.5</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>graus_decimais <span class="op">=</span> graus <span class="op">+</span> minutos <span class="op">/</span> <span class="dv">60</span> <span class="op">+</span> segundos <span class="op">/</span> <span class="dv">3600</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>sim <span class="op">=</span> <span class="bu">chr</span>(<span class="dv">34</span>)   <span class="co"># caractere " (símbolo de segundos em GMS)</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Coordenada em GMS : </span><span class="sc">{</span>graus<span class="sc">}</span><span class="ss">° </span><span class="sc">{</span>minutos<span class="sc">}</span><span class="ss">' </span><span class="sc">{</span>segundos<span class="sc">}{</span>sim<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Coordenada em GD  : </span><span class="sc">{</span>graus_decimais<span class="sc">:.6f}</span><span class="ss">°"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Coordenada em GMS : 23° 32' 48.5"
+Coordenada em GD  : 23.546806°</code></pre>
+</div>
+</div>
+<div id="7i3nwYKWnKcT" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}}" data-outputid="66c913fe-796c-40ec-bf68-0a4e83fc1bcd">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>graus_decimais<span class="op">=-</span><span class="fl">15.3535</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>graus    <span class="op">=</span> <span class="bu">int</span>(graus_decimais)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>minutos  <span class="op">=</span> <span class="bu">int</span>((graus_decimais <span class="op">-</span> graus) <span class="op">*</span> <span class="dv">60</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>segundos <span class="op">=</span> (graus_decimais <span class="op">-</span> graus <span class="op">-</span> minutos <span class="op">/</span> <span class="dv">60</span>) <span class="op">*</span> <span class="dv">3600</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>sim <span class="op">=</span> <span class="bu">chr</span>(<span class="dv">34</span>)   <span class="co"># caractere " (símbolo de segundos em GMS)</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Coordenada em GD  : </span><span class="sc">{</span>graus_decimais<span class="sc">}</span><span class="ss">°"</span>)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Coordenada em GMS : </span><span class="sc">{</span>graus<span class="sc">}</span><span class="ss">° </span><span class="sc">{</span>minutos<span class="sc">}</span><span class="ss">' </span><span class="sc">{</span>segundos<span class="sc">:.2f}{</span>sim<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Coordenada em GD  : -15.3535°
+Coordenada em GMS : -15° -21' -12.60"</code></pre>
+</div>
+</div>
+<div id="76fe6ecb" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.368065Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.367954Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.370846Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.370322Z&quot;}}" data-outputid="1c3ec8fc-2da3-4b83-bf36-339b546ff5a7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Distância euclidiana entre dois pontos (plano) ────────────────────────</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Útil para projetos em coordenadas UTM (metros)</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Fórmula: d = sqrt( (x2-x1)^2 + (y2-y1)^2 )</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math    <span class="co"># módulo matemático do Python</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Ponto A – vértice de uma parcela rural (UTM, fuso 23S, SIRGAS2000)</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> <span class="fl">683_450.0</span>    <span class="co"># metros (Leste)</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>y1 <span class="op">=</span> <span class="fl">7_456_200.0</span>  <span class="co"># metros (Norte)</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Ponto B – vértice adjacente</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> <span class="fl">683_920.5</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>y2 <span class="op">=</span> <span class="fl">7_456_650.3</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>z<span class="op">=</span>math.sqrt(<span class="dv">16</span>)</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"z vale: "</span>, z)</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>distancia <span class="op">=</span> math.sqrt((x2 <span class="op">-</span> x1)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (y2 <span class="op">-</span> y1)<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Ponto A: E=</span><span class="sc">{</span>x1<span class="sc">:.1f}</span><span class="ss"> m  N=</span><span class="sc">{</span>y1<span class="sc">:.1f}</span><span class="ss"> m"</span>)</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Ponto B: E=</span><span class="sc">{</span>x2<span class="sc">:.1f}</span><span class="ss"> m  N=</span><span class="sc">{</span>y2<span class="sc">:.1f}</span><span class="ss"> m"</span>)</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Distância AB: </span><span class="sc">{</span>distancia<span class="sc">:.3f}</span><span class="ss"> m"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>z vale:  4.0
+Ponto A: E=683450.0 m  N=7456200.0 m
+Ponto B: E=683920.5 m  N=7456650.3 m
+Distância AB: 651.261 m</code></pre>
+</div>
+</div>
+<div id="1c5fdbb2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.372164Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.372028Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.374847Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.374289Z&quot;}}" data-outputid="62a5d620-af14-42b0-a9a6-39753077b2c7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Cálculo de área de um lote urbano ─────────────────────────────────────</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>comprimento <span class="op">=</span> <span class="fl">30.0</span>  <span class="co"># metros (profundidade / testada de fundos)</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>largura     <span class="op">=</span> <span class="fl">12.0</span>  <span class="co"># metros (frente)</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>area_m2  <span class="op">=</span> comprimento <span class="op">*</span> largura</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>area_ha  <span class="op">=</span> area_m2 <span class="op">/</span> <span class="dv">10_000</span>           <span class="co"># 1 hectare  = 10.000 m²</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>area_alq <span class="op">=</span> area_m2 <span class="op">/</span> <span class="dv">24_200</span>           <span class="co"># 1 alqueire paulista = 24.200 m²</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Lote </span><span class="sc">{</span>comprimento<span class="sc">:.0f}</span><span class="ss"> m x </span><span class="sc">{</span>largura<span class="sc">:.0f}</span><span class="ss"> m"</span>)</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Área : </span><span class="sc">{</span>area_m2<span class="sc">:.2f}</span><span class="ss"> m²"</span>)</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Área : </span><span class="sc">{</span>area_ha<span class="sc">:.6f}</span><span class="ss"> ha"</span>)</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  Área : </span><span class="sc">{</span>area_alq<span class="sc">:.6f}</span><span class="ss"> alqueires paulistas"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Lote 30 m x 12 m
+  Área : 360.00 m²
+  Área : 0.036000 ha
+  Área : 0.014876 alqueires paulistas</code></pre>
+</div>
+</div>
+<div id="96775531" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.376051Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.375935Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.378704Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.378167Z&quot;}}" data-outputid="9ed6b556-620e-434e-cf13-f492ad4002e1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Operadores de comparação ───────────────────────────────────────────────</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>escala_levantamento <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> <span class="dv">1_000</span>    <span class="co"># 1:1.000</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>escala_minima_lei   <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> <span class="dv">25_000</span>   <span class="co"># exigência mínima da lei</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Escala do levantamento : 1:</span><span class="sc">{</span><span class="bu">int</span>(<span class="dv">1</span><span class="op">/</span>escala_levantamento)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Escala mínima exigida  : 1:</span><span class="sc">{</span><span class="bu">int</span>(<span class="dv">1</span><span class="op">/</span>escala_minima_lei)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Levantamento atende à escala mínima?"</span>,</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>      escala_levantamento <span class="op">&gt;=</span> escala_minima_lei)</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>fuso_ponto1, fuso_ponto2 <span class="op">=</span> <span class="dv">23</span>, <span class="dv">24</span></span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Pontos no mesmo fuso? </span><span class="sc">{</span>fuso_ponto1 <span class="op">==</span> fuso_ponto2<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Escala do levantamento : 1:1000
+Escala mínima exigida  : 1:24999
+
+Levantamento atende à escala mínima? True
+Pontos no mesmo fuso? False</code></pre>
+</div>
+</div>
+<div id="5ce6ff8d" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.379816Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.379680Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.382392Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.381848Z&quot;}}" data-outputid="55d627ab-4432-40da-eba0-8447e37e9b57">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Operadores lógicos: and, or, not ──────────────────────────────────────</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>pdop           <span class="op">=</span> <span class="fl">2.1</span>   <span class="co"># PDOP do receptor GNSS  (bom se &lt; 4.0)</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>num_satelites  <span class="op">=</span> <span class="dv">7</span>     <span class="co"># satélites rastreados   (mínimo 5)</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>qualidade_ok <span class="op">=</span> (pdop <span class="op">&lt;</span> <span class="fl">4.0</span>) <span class="kw">and</span> (num_satelites <span class="op">&gt;=</span> <span class="dv">5</span>)</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"PDOP = </span><span class="sc">{</span>pdop<span class="sc">}</span><span class="ss">  |  Satélites = </span><span class="sc">{</span>num_satelites<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Coleta com boa qualidade? </span><span class="sc">{</span>qualidade_ok<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Coleta com problema?      </span><span class="sc">{</span><span class="kw">not</span> qualidade_ok<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>PDOP = 2.1  |  Satélites = 7
+Coleta com boa qualidade? True
+Coleta com problema?      False</code></pre>
+</div>
+</div>
+<div id="af4116f6" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.383567Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.383455Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.385384Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.384888Z&quot;}}">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── ✏️ Exercício 2 ─────────────────────────────────────────────────────────</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Uma gleba tem as dimensões abaixo:</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   frente  = 120 m  |  fundos = 140 m</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   lateral = 80 m   |  outra lateral = 75 m</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcule a área pelo método do trapézio:</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   área = ((frente + fundos) / 2) * ((lat1 + lat2) / 2)</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Exiba a área em m², hectares e alqueires paulistas (1 alq = 24.200 m²).</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Escreva seu código aqui:</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="bloco-3-estruturas-condicionais" class="level2">
+<h2 class="anchored" data-anchor-id="bloco-3-estruturas-condicionais">🔀 BLOCO 3 — Estruturas Condicionais</h2>
+<section id="minutos-1" class="level3">
+<h3 class="anchored" data-anchor-id="minutos-1">⏱️ ~20 minutos</h3>
+<p>Permitem que o programa tome <strong>decisões</strong> com base em condições.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> condição:</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># executa se verdadeiro</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> outra_condição:</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># executa se a segunda for verdadeira</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># executa se nenhuma for verdadeira</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<blockquote class="blockquote">
+<p>⚠️ <strong>Indentação</strong> (recuo de 4 espaços) é <strong>obrigatória</strong> em Python!</p>
+</blockquote>
+<div id="c659fa44" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.386600Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.386489Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.389079Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.388510Z&quot;}}" data-outputid="039660a1-bddb-4cd3-c933-e41a2d953f96">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Determinação do Hemisfério a partir da latitude ───────────────────────</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>latitude <span class="op">=</span> <span class="op">-</span><span class="fl">15.7975</span>   <span class="co"># Brasília</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> latitude <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    hemisferio <span class="op">=</span> <span class="st">"Norte"</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> latitude <span class="op">&lt;</span> <span class="dv">0</span>:</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>    hemisferio <span class="op">=</span> <span class="st">"Sul"</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>    hemisferio <span class="op">=</span> <span class="st">"Equador"</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Latitude </span><span class="sc">{</span>latitude<span class="sc">}</span><span class="ss">° -&gt; Hemisfério </span><span class="sc">{</span>hemisferio<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Latitude -15.7975° -&gt; Hemisfério Sul</code></pre>
+</div>
+</div>
+<div id="3e90d93b" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.390142Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.390032Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.392634Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.392178Z&quot;}}" data-outputid="3de057c6-c178-4ed9-9e8b-06123ddb97cc">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Determinação automática do Fuso UTM ───────────────────────────────────</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Fórmula: Fuso = int((longitude + 180) / 6) + 1</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>longitude <span class="op">=</span> <span class="op">-</span><span class="fl">47.8919</span>   <span class="co"># Brasília</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>fuso <span class="op">=</span> <span class="bu">int</span>((longitude <span class="op">+</span> <span class="dv">180</span>) <span class="op">/</span> <span class="dv">6</span>) <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Longitude : </span><span class="sc">{</span>longitude<span class="sc">}</span><span class="ss">°"</span>)</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Fuso UTM  : </span><span class="sc">{</span>fuso<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificação: território brasileiro ocupa os fusos 18 a 25</span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="dv">18</span> <span class="op">&lt;=</span> fuso <span class="op">&lt;=</span> <span class="dv">25</span>:</span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Fuso dentro do território brasileiro."</span>)</span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Fuso fora do território brasileiro."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Longitude : -47.8919°
+Fuso UTM  : 23
+Fuso dentro do território brasileiro.</code></pre>
+</div>
+</div>
+<div id="e34dae6a" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.393756Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.393646Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.396489Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.395956Z&quot;}}" data-outputid="5f462098-b5f2-402d-8c15-2360ec494216">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Classificação de precisão GNSS ────────────────────────────────────────</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Baseado no desvio padrão horizontal (σ) – referência: IBGE/Incra</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>sigma_h <span class="op">=</span> <span class="fl">0.05</span>   <span class="co"># metros — altere este valor e observe a saída!</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> sigma_h <span class="op">&lt;=</span> <span class="fl">0.03</span>:</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>    classe <span class="op">=</span> <span class="st">"P1 – Precisão Milimétrica"</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> sigma_h <span class="op">&lt;=</span> <span class="fl">0.10</span>:</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>    classe <span class="op">=</span> <span class="st">"P2 – Precisão Centimétrica"</span></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> sigma_h <span class="op">&lt;=</span> <span class="fl">0.50</span>:</span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>    classe <span class="op">=</span> <span class="st">"P3 – Precisão Decimétrica"</span></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> sigma_h <span class="op">&lt;=</span> <span class="fl">1.00</span>:</span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>    classe <span class="op">=</span> <span class="st">"P4 – Precisão Métrica"</span></span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a>    classe <span class="op">=</span> <span class="st">"Fora de Classificação (baixa precisão)"</span></span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Desvio padrão horizontal : </span><span class="sc">{</span>sigma_h<span class="sc">}</span><span class="ss"> m"</span>)</span>
+<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Classificação            : </span><span class="sc">{</span>classe<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Desvio padrão horizontal : 0.05 m
+Classificação            : P2 – Precisão Centimétrica</code></pre>
+</div>
+</div>
+<div id="78360b40" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.397617Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.397504Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.400508Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.399975Z&quot;}}" data-outputid="ee7c282b-b1be-41c5-f702-4b51d8d0642c">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Verificação de sobreposição de imagens aéreas (fotogrametria) ─────────</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Normas técnicas recomendam:</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   sobreposição lateral      &gt;= 30 %</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   sobreposição longitudinal &gt;= 60 %</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>overlap_lat  <span class="op">=</span> <span class="dv">35</span>   <span class="co"># % – sobreposição lateral informada pelo piloto</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>overlap_long <span class="op">=</span> <span class="dv">80</span>   <span class="co"># % – sobreposição longitudinal</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>lat_ok  <span class="op">=</span> overlap_lat  <span class="op">&gt;=</span> <span class="dv">30</span></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>long_ok <span class="op">=</span> overlap_long <span class="op">&gt;=</span> <span class="dv">60</span></span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> lat_ok <span class="kw">and</span> long_ok:</span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"APROVADO – cobertura fotogramétrica dentro das normas."</span>)</span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  Lateral     : </span><span class="sc">{</span>overlap_lat<span class="sc">}</span><span class="ss">% (min 30%)"</span>)</span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  Longitudinal: </span><span class="sc">{</span>overlap_long<span class="sc">}</span><span class="ss">% (min 60%)"</span>)</span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> lat_ok:</span>
+<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"REPROVADO – sobreposição longitudinal insuficiente."</span>)</span>
+<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  Longitudinal: </span><span class="sc">{</span>overlap_long<span class="sc">}</span><span class="ss">% (min 60%)"</span>)</span>
+<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> long_ok:</span>
+<span id="cb32-20"><a href="#cb32-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"REPROVADO – sobreposição lateral insuficiente."</span>)</span>
+<span id="cb32-21"><a href="#cb32-21" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  Lateral: </span><span class="sc">{</span>overlap_lat<span class="sc">}</span><span class="ss">% (min 30%)"</span>)</span>
+<span id="cb32-22"><a href="#cb32-22" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb32-23"><a href="#cb32-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"REPROVADO – ambas as sobreposições estão abaixo do mínimo. Refazer o voo!"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>APROVADO – cobertura fotogramétrica dentro das normas.
+  Lateral     : 35% (min 30%)
+  Longitudinal: 80% (min 60%)</code></pre>
+</div>
+</div>
+<div id="e393c085" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.401593Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.401479Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.403392Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.402905Z&quot;}}">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── ✏️ Exercício 3 ─────────────────────────────────────────────────────────</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Escreva um programa que:</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   1. Atribua uma longitude qualquer (ex: -34.88  para Recife)</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   2. Calcule o fuso UTM correspondente</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   3. Informe se o ponto está no Brasil (fusos 18 a 25)</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   4. Com base em uma latitude atribuída, informe o hemisfério:</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="co">#        latitude &lt; 0  -&gt; "Sul"  |  latitude &gt;= 0 -&gt; "Norte"</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Escreva seu código aqui:</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="bloco-4-estruturas-de-repetição-e-listas" class="level2">
+<h2 class="anchored" data-anchor-id="bloco-4-estruturas-de-repetição-e-listas">🔁 BLOCO 4 — Estruturas de Repetição e Listas</h2>
+<section id="minutos-2" class="level3">
+<h3 class="anchored" data-anchor-id="minutos-2">⏱️ ~20 minutos</h3>
+<p>Evitam copiar o mesmo código várias vezes.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Laço</th>
+<th>Quando usar</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>for</code></td>
+<td>quando sabemos quantas repetições</td>
+</tr>
+<tr class="even">
+<td><code>while</code></td>
+<td>quando repetimos até uma condição ser falsa</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="listas-armazenando-múltiplos-valores" class="level3">
+<h3 class="anchored" data-anchor-id="listas-armazenando-múltiplos-valores">Listas — armazenando múltiplos valores</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>coordenadas <span class="op">=</span> [lat1, lat2, lat3, ...]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>Indexação começa em <strong>0</strong>: <code>coordenadas[0]</code> é o primeiro elemento</li>
+<li><code>len(lista)</code> retorna o tamanho</li>
+</ul>
+<div id="39c85069" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.404563Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.404424Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.407376Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.406756Z&quot;}}" data-outputid="d8df65fa-cb27-434c-9e8f-a76c48f4fc9b">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Listas de coordenadas UTM ─────────────────────────────────────────────</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Pontos levantados em um levantamento planimétrico (UTM – fuso 23S)</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>pontos_x <span class="op">=</span> [<span class="fl">683_450.0</span>, <span class="fl">683_920.5</span>, <span class="fl">684_100.3</span>, <span class="fl">683_750.8</span>, <span class="fl">683_300.2</span>]</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>pontos_y <span class="op">=</span> [<span class="fl">7_456_200.0</span>, <span class="fl">7_456_650.3</span>, <span class="fl">7_456_300.7</span>, <span class="fl">7_455_900.1</span>, <span class="fl">7_455_700.5</span>]</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>nomes    <span class="op">=</span> [<span class="st">"PT-01"</span>, <span class="st">"PT-02"</span>, <span class="st">"PT-03"</span>, <span class="st">"PT-04"</span>, <span class="st">"PT-05"</span>]</span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'Ponto'</span><span class="sc">:&lt;8}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'Este (m)'</span><span class="sc">:&lt;16}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'Norte (m)'</span><span class="sc">:&lt;16}</span><span class="ss">"</span>)</span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">42</span>)</span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(nomes)):</span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>nomes[i]<span class="sc">:&lt;8}</span><span class="ss"> </span><span class="sc">{</span>pontos_x[i]<span class="sc">:&lt;16.2f}</span><span class="ss"> </span><span class="sc">{</span>pontos_y[i]<span class="sc">:&lt;16.2f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Ponto    Este (m)         Norte (m)       
+------------------------------------------
+PT-01    683450.00        7456200.00      
+PT-02    683920.50        7456650.30      
+PT-03    684100.30        7456300.70      
+PT-04    683750.80        7455900.10      
+PT-05    683300.20        7455700.50      </code></pre>
+</div>
+</div>
+<div id="411fefe1" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.408528Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.408411Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.410846Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.410313Z&quot;}}" data-outputid="903993ff-100c-4496-f976-b41ba8b21a19">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── enumerate() — forma idiomática do Python ──────────────────────────────</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Relatório de pontos:"</span>)</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> idx, nome <span class="kw">in</span> <span class="bu">enumerate</span>(nomes):</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  [</span><span class="sc">{</span>idx<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">] </span><span class="sc">{</span>nome<span class="sc">}</span><span class="ss">  E=</span><span class="sc">{</span>pontos_x[idx]<span class="sc">:.2f}</span><span class="ss"> m  N=</span><span class="sc">{</span>pontos_y[idx]<span class="sc">:.2f}</span><span class="ss"> m"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Relatório de pontos:
+  [1] PT-01  E=683450.00 m  N=7456200.00 m
+  [2] PT-02  E=683920.50 m  N=7456650.30 m
+  [3] PT-03  E=684100.30 m  N=7456300.70 m
+  [4] PT-04  E=683750.80 m  N=7455900.10 m
+  [5] PT-05  E=683300.20 m  N=7455700.50 m</code></pre>
+</div>
+</div>
+<div id="c9b0c966" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.411919Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.411784Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.414728Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.414200Z&quot;}}" data-outputid="bd32c3a7-6105-46af-91bc-bd18dc6be317">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Distâncias entre pontos consecutivos ──────────────────────────────────</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Distâncias entre pontos consecutivos:"</span>)</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>distancia_total <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(nomes) <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>    dx <span class="op">=</span> pontos_x[i<span class="op">+</span><span class="dv">1</span>] <span class="op">-</span> pontos_x[i]</span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a>    dy <span class="op">=</span> pontos_y[i<span class="op">+</span><span class="dv">1</span>] <span class="op">-</span> pontos_y[i]</span>
+<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a>    d  <span class="op">=</span> math.sqrt(dx<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> dy<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a>    distancia_total <span class="op">+=</span> d</span>
+<span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  </span><span class="sc">{</span>nomes[i]<span class="sc">}</span><span class="ss"> -&gt; </span><span class="sc">{</span>nomes[i<span class="op">+</span><span class="dv">1</span>]<span class="sc">}</span><span class="ss"> : </span><span class="sc">{</span>d<span class="sc">:.3f}</span><span class="ss"> m"</span>)</span>
+<span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb40-15"><a href="#cb40-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Comprimento total do trajeto: </span><span class="sc">{</span>distancia_total<span class="sc">:.3f}</span><span class="ss"> m"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Distâncias entre pontos consecutivos:
+  PT-01 -&gt; PT-02 : 651.261 m
+  PT-02 -&gt; PT-03 : 393.126 m
+  PT-03 -&gt; PT-04 : 531.630 m
+  PT-04 -&gt; PT-05 : 492.829 m
+
+Comprimento total do trajeto: 2068.846 m</code></pre>
+</div>
+</div>
+<div id="670b0a3c" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.415921Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.415802Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.418696Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.418152Z&quot;}}" data-outputid="f1d1c3b5-33fb-4b18-991c-f00e3806def4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── while: simulando espera por qualidade GNSS ────────────────────────────</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>random.seed(<span class="dv">42</span>)   <span class="co"># semente para resultados reproduzíveis</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>medicao <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>pdop    <span class="op">=</span> <span class="fl">10.0</span>    <span class="co"># valor inicial ruim</span></span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Aguardando qualidade de sinal GNSS...</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> pdop <span class="op">&gt;=</span> <span class="fl">3.0</span>:</span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>    medicao <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a>    pdop <span class="op">=</span> <span class="bu">round</span>(random.uniform(<span class="fl">1.5</span>, <span class="fl">6.0</span>), <span class="dv">2</span>)</span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a>    status <span class="op">=</span> <span class="st">"OK"</span> <span class="cf">if</span> pdop <span class="op">&lt;</span> <span class="fl">3.0</span> <span class="cf">else</span> <span class="st">"aguardando..."</span></span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  Medicao </span><span class="sc">{</span>medicao<span class="sc">:02d}</span><span class="ss"> | PDOP = </span><span class="sc">{</span>pdop<span class="sc">}</span><span class="ss">  [</span><span class="sc">{</span>status<span class="sc">}</span><span class="ss">]"</span>)</span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sinal aceito na medicao </span><span class="sc">{</span>medicao<span class="sc">}</span><span class="ss"> com PDOP = </span><span class="sc">{</span>pdop<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Aguardando qualidade de sinal GNSS...
+
+  Medicao 01 | PDOP = 4.38  [aguardando...]
+  Medicao 02 | PDOP = 1.61  [OK]
+Sinal aceito na medicao 2 com PDOP = 1.61</code></pre>
+</div>
+</div>
+<div id="56000440" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.419813Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.419699Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.422720Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.422214Z&quot;}}" data-outputid="8588a0ef-8e07-4797-c26b-dfeceb9e304e">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Conversão em lote: GMS → Graus Decimais ───────────────────────────────</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Lista de cidades brasileiras com coordenadas em GMS</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>coordenadas_gms <span class="op">=</span> [</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Sao Paulo"</span>,    <span class="dv">23</span>, <span class="dv">32</span>, <span class="fl">48.5</span>),</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Brasilia"</span>,     <span class="dv">15</span>, <span class="dv">47</span>, <span class="fl">51.0</span>),</span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Manaus"</span>,        <span class="dv">3</span>,  <span class="dv">6</span>, <span class="fl">47.3</span>),</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>    (<span class="st">"Porto Alegre"</span>, <span class="dv">30</span>,  <span class="dv">1</span>, <span class="fl">59.0</span>),</span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'Cidade'</span><span class="sc">:&lt;16}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'GMS'</span><span class="sc">:&gt;22}</span><span class="ss">   </span><span class="sc">{</span><span class="st">'Graus Decimais'</span><span class="sc">:&gt;16}</span><span class="ss">"</span>)</span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">58</span>)</span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> cidade, g, m, s <span class="kw">in</span> coordenadas_gms:</span>
+<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a>    gd <span class="op">=</span> g <span class="op">+</span> m<span class="op">/</span><span class="dv">60</span> <span class="op">+</span> s<span class="op">/</span><span class="dv">3600</span></span>
+<span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a>    sim_s <span class="op">=</span> <span class="bu">chr</span>(<span class="dv">39</span>)  <span class="co"># apostrofo (minutos)</span></span>
+<span id="cb44-16"><a href="#cb44-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>cidade<span class="sc">:&lt;16}</span><span class="ss">  </span><span class="sc">{</span>g<span class="sc">:&gt;3}</span><span class="ss">d </span><span class="sc">{</span>m<span class="sc">:&gt;2}{</span>sim_s<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>s<span class="sc">:&gt;5.1f}</span><span class="ss">s  -&gt;  -</span><span class="sc">{</span>gd<span class="sc">:.6f}</span><span class="ss">°"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Cidade                              GMS     Graus Decimais
+----------------------------------------------------------
+Sao Paulo          23d 32'  48.5s  -&gt;  -23.546806°
+Brasilia           15d 47'  51.0s  -&gt;  -15.797500°
+Manaus              3d  6'  47.3s  -&gt;  -3.113139°
+Porto Alegre       30d  1'  59.0s  -&gt;  -30.033056°</code></pre>
+</div>
+</div>
+<div id="fdcb3755" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.423804Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.423690Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.425638Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.425186Z&quot;}}">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── ✏️ Exercício 4 ─────────────────────────────────────────────────────────</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Feche o polígono acrescentando o PT-01 ao final das listas:</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   px = pontos_x + [pontos_x[0]]</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   py = pontos_y + [pontos_y[0]]</span></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   nm = nomes    + [nomes[0]]</span></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcule:</span></span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   a) Perímetro total do polígono fechado</span></span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a><span class="co">#   b) Maior distância entre dois pontos consecutivos (e quais pontos)</span></span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a><span class="co">#   c) Menor distância entre dois pontos consecutivos (e quais pontos)</span></span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Escreva seu código aqui:</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="bloco-5-funções-e-aplicação-final" class="level2">
+<h2 class="anchored" data-anchor-id="bloco-5-funções-e-aplicação-final">🔧 BLOCO 5 — Funções e Aplicação Final</h2>
+<section id="minutos-3" class="level3">
+<h3 class="anchored" data-anchor-id="minutos-3">⏱️ ~20 minutos</h3>
+<p><strong>Funções</strong> encapsulam um bloco de código reutilizável. Princípio: <strong>escreva uma vez, use várias vezes.</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> nome_da_funcao(param1, param2):</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># código</span></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> resultado</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>def</code> → define a função</li>
+<li><code>return</code> → devolve o resultado</li>
+<li><strong>Parâmetros com valor padrão</strong> evitam repetição: <code>def f(x, y=0):</code></li>
+</ul>
+<div id="42e252d5" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.426810Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.426674Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.430116Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.429590Z&quot;}}" data-outputid="57135243-f784-4eae-ddbf-b68e9024e9fd">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Função: GMS → Graus Decimais ─────────────────────────────────────────</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> gms_para_decimal(graus, minutos, segundos, direcao<span class="op">=</span><span class="st">"S"</span>):</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''Converte coordenadas de GMS para Graus Decimais.</span></span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="co">        graus    (int)   : graus inteiros</span></span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a><span class="co">        minutos  (int)   : minutos inteiros</span></span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a><span class="co">        segundos (float) : segundos decimais</span></span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a><span class="co">        direcao  (str)   : N, S, E ou W</span></span>
+<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-12"><a href="#cb48-12" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb48-13"><a href="#cb48-13" aria-hidden="true" tabindex="-1"></a><span class="co">        float: coordenada em graus decimais (negativo para S e W)</span></span>
+<span id="cb48-14"><a href="#cb48-14" aria-hidden="true" tabindex="-1"></a><span class="co">    '''</span></span>
+<span id="cb48-15"><a href="#cb48-15" aria-hidden="true" tabindex="-1"></a>    decimal <span class="op">=</span> graus <span class="op">+</span> minutos <span class="op">/</span> <span class="dv">60</span> <span class="op">+</span> segundos <span class="op">/</span> <span class="dv">3600</span></span>
+<span id="cb48-16"><a href="#cb48-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> direcao <span class="kw">in</span> (<span class="st">"S"</span>, <span class="st">"W"</span>):</span>
+<span id="cb48-17"><a href="#cb48-17" aria-hidden="true" tabindex="-1"></a>        decimal <span class="op">=</span> <span class="op">-</span>decimal</span>
+<span id="cb48-18"><a href="#cb48-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> decimal</span>
+<span id="cb48-19"><a href="#cb48-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-20"><a href="#cb48-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-21"><a href="#cb48-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Testando a função</span></span>
+<span id="cb48-22"><a href="#cb48-22" aria-hidden="true" tabindex="-1"></a>lat_sp  <span class="op">=</span> gms_para_decimal(<span class="dv">23</span>, <span class="dv">32</span>, <span class="fl">48.5</span>, <span class="st">"S"</span>)</span>
+<span id="cb48-23"><a href="#cb48-23" aria-hidden="true" tabindex="-1"></a>lon_sp  <span class="op">=</span> gms_para_decimal(<span class="dv">46</span>, <span class="dv">38</span>,  <span class="fl">9.6</span>, <span class="st">"W"</span>)</span>
+<span id="cb48-24"><a href="#cb48-24" aria-hidden="true" tabindex="-1"></a>lat_bsb <span class="op">=</span> gms_para_decimal(<span class="dv">15</span>, <span class="dv">47</span>, <span class="fl">51.0</span>, <span class="st">"S"</span>)</span>
+<span id="cb48-25"><a href="#cb48-25" aria-hidden="true" tabindex="-1"></a>lon_bsb <span class="op">=</span> gms_para_decimal(<span class="dv">47</span>, <span class="dv">53</span>, <span class="fl">31.3</span>, <span class="st">"W"</span>)</span>
+<span id="cb48-26"><a href="#cb48-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-27"><a href="#cb48-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sao Paulo  -&gt; Lat: </span><span class="sc">{</span>lat_sp<span class="sc">:.6f}</span><span class="ss">  Lon: </span><span class="sc">{</span>lon_sp<span class="sc">:.6f}</span><span class="ss">"</span>)</span>
+<span id="cb48-28"><a href="#cb48-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Brasilia   -&gt; Lat: </span><span class="sc">{</span>lat_bsb<span class="sc">:.6f}</span><span class="ss">  Lon: </span><span class="sc">{</span>lon_bsb<span class="sc">:.6f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Sao Paulo  -&gt; Lat: -23.546806  Lon: -46.636000
+Brasilia   -&gt; Lat: -15.797500  Lon: -47.892028</code></pre>
+</div>
+</div>
+<div id="768b3ca5" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.431280Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.431158Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.434729Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.434144Z&quot;}}" data-outputid="2e61a8ce-c2dc-4b89-c04c-e74aaf7c53ff">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Função: Distância Haversine ───────────────────────────────────────────</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcula a distância entre dois pontos na superfície terrestre.</span></span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Amplamente usada em GPS e navegação.</span></span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> distancia_haversine(lat1, lon1, lat2, lon2, raio_terra<span class="op">=</span><span class="dv">6_371_000</span>):</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''Calcula a distância geodésica usando a fórmula de Haversine.</span></span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a><span class="co">        lat1, lon1 (float): coordenadas do ponto 1 em graus decimais</span></span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a><span class="co">        lat2, lon2 (float): coordenadas do ponto 2 em graus decimais</span></span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a><span class="co">        raio_terra (float): raio médio da Terra em metros</span></span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb50-16"><a href="#cb50-16" aria-hidden="true" tabindex="-1"></a><span class="co">        float: distância em metros</span></span>
+<span id="cb50-17"><a href="#cb50-17" aria-hidden="true" tabindex="-1"></a><span class="co">    '''</span></span>
+<span id="cb50-18"><a href="#cb50-18" aria-hidden="true" tabindex="-1"></a>    lat1, lon1, lat2, lon2 <span class="op">=</span> <span class="bu">map</span>(math.radians, [lat1, lon1, lat2, lon2])</span>
+<span id="cb50-19"><a href="#cb50-19" aria-hidden="true" tabindex="-1"></a>    dlat <span class="op">=</span> lat2 <span class="op">-</span> lat1</span>
+<span id="cb50-20"><a href="#cb50-20" aria-hidden="true" tabindex="-1"></a>    dlon <span class="op">=</span> lon2 <span class="op">-</span> lon1</span>
+<span id="cb50-21"><a href="#cb50-21" aria-hidden="true" tabindex="-1"></a>    a <span class="op">=</span> math.sin(dlat<span class="op">/</span><span class="dv">2</span>)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> math.cos(lat1) <span class="op">*</span> math.cos(lat2) <span class="op">*</span> math.sin(dlon<span class="op">/</span><span class="dv">2</span>)<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb50-22"><a href="#cb50-22" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> math.asin(math.sqrt(a))</span>
+<span id="cb50-23"><a href="#cb50-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> raio_terra <span class="op">*</span> c</span>
+<span id="cb50-24"><a href="#cb50-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-25"><a href="#cb50-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-26"><a href="#cb50-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Sao Paulo -&gt; Brasilia</span></span>
+<span id="cb50-27"><a href="#cb50-27" aria-hidden="true" tabindex="-1"></a>dist_m  <span class="op">=</span> distancia_haversine(lat_sp, lon_sp, lat_bsb, lon_bsb)</span>
+<span id="cb50-28"><a href="#cb50-28" aria-hidden="true" tabindex="-1"></a>dist_km <span class="op">=</span> dist_m <span class="op">/</span> <span class="dv">1000</span></span>
+<span id="cb50-29"><a href="#cb50-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-30"><a href="#cb50-30" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Distancia Sao Paulo -&gt; Brasilia"</span>)</span>
+<span id="cb50-31"><a href="#cb50-31" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  </span><span class="sc">{</span>dist_m<span class="sc">:,.0f}</span><span class="ss"> m"</span>)</span>
+<span id="cb50-32"><a href="#cb50-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  </span><span class="sc">{</span>dist_km<span class="sc">:,.1f}</span><span class="ss"> km"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Distancia Sao Paulo -&gt; Brasilia
+  871,641 m
+  871.6 km</code></pre>
+</div>
+</div>
+<div id="395cb94c" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.435855Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.435741Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.438359Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.437858Z&quot;}}" data-outputid="7b8e4646-7965-453f-9d22-471186b1de4c">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Função: Calcular fuso UTM ─────────────────────────────────────────────</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calcular_fuso_utm(longitude, latitude):</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''Retorna o fuso UTM e o hemisfério a partir das coordenadas.'''</span></span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>    fuso <span class="op">=</span> <span class="bu">int</span>((longitude <span class="op">+</span> <span class="dv">180</span>) <span class="op">/</span> <span class="dv">6</span>) <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a>    hemisferio <span class="op">=</span> <span class="st">"N"</span> <span class="cf">if</span> latitude <span class="op">&gt;=</span> <span class="dv">0</span> <span class="cf">else</span> <span class="st">"S"</span></span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> fuso, hemisferio</span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-9"><a href="#cb52-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb52-10"><a href="#cb52-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Teste</span></span>
+<span id="cb52-11"><a href="#cb52-11" aria-hidden="true" tabindex="-1"></a>f, h <span class="op">=</span> calcular_fuso_utm(lon_bsb, lat_bsb)</span>
+<span id="cb52-12"><a href="#cb52-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Brasilia -&gt; Fuso </span><span class="sc">{</span>f<span class="sc">}{</span>h<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Brasilia -&gt; Fuso 23S</code></pre>
+</div>
+</div>
+<div id="4c855df1" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.439455Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.439319Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.442855Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.442342Z&quot;}}" data-outputid="3b429a04-4ff0-4a0a-b567-7db0e37ed558">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── APLICAÇÃO FINAL: Relatório Geodésico de Cidades Brasileiras ───────────</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>cidades <span class="op">=</span> {</span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Sao Paulo"</span>    : (gms_para_decimal(<span class="dv">23</span>,<span class="dv">32</span>,<span class="fl">48.5</span>,<span class="st">"S"</span>), gms_para_decimal(<span class="dv">46</span>,<span class="dv">38</span>, <span class="fl">9.6</span>,<span class="st">"W"</span>)),</span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Brasilia"</span>     : (gms_para_decimal(<span class="dv">15</span>,<span class="dv">47</span>,<span class="fl">51.0</span>,<span class="st">"S"</span>), gms_para_decimal(<span class="dv">47</span>,<span class="dv">53</span>,<span class="fl">31.3</span>,<span class="st">"W"</span>)),</span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Manaus"</span>       : (gms_para_decimal( <span class="dv">3</span>, <span class="dv">6</span>, <span class="fl">1.8</span>,<span class="st">"S"</span>), gms_para_decimal(<span class="dv">60</span>, <span class="dv">1</span>,<span class="fl">33.9</span>,<span class="st">"W"</span>)),</span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Porto Alegre"</span> : (<span class="op">-</span><span class="fl">30.0346</span>, <span class="op">-</span><span class="fl">51.2177</span>),</span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Recife"</span>       : ( <span class="op">-</span><span class="fl">8.0476</span>, <span class="op">-</span><span class="fl">34.8770</span>),</span>
+<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Belem"</span>        : ( <span class="op">-</span><span class="fl">1.4558</span>, <span class="op">-</span><span class="fl">48.5044</span>),</span>
+<span id="cb54-10"><a href="#cb54-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb54-11"><a href="#cb54-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-12"><a href="#cb54-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span> <span class="op">*</span> <span class="dv">66</span>)</span>
+<span id="cb54-13"><a href="#cb54-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'CIDADE'</span><span class="sc">:&lt;16}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'LAT (graus)'</span><span class="sc">:&gt;12}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'LON (graus)'</span><span class="sc">:&gt;12}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'FUSO'</span><span class="sc">:&gt;6}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'HEMI'</span><span class="sc">:&gt;5}</span><span class="ss">"</span>)</span>
+<span id="cb54-14"><a href="#cb54-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span> <span class="op">*</span> <span class="dv">66</span>)</span>
+<span id="cb54-15"><a href="#cb54-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-16"><a href="#cb54-16" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> cidade, (lat, lon) <span class="kw">in</span> cidades.items():</span>
+<span id="cb54-17"><a href="#cb54-17" aria-hidden="true" tabindex="-1"></a>    fuso, hemi <span class="op">=</span> calcular_fuso_utm(lon, lat)</span>
+<span id="cb54-18"><a href="#cb54-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>cidade<span class="sc">:&lt;16}</span><span class="ss"> </span><span class="sc">{</span>lat<span class="sc">:&gt;12.4f}</span><span class="ss"> </span><span class="sc">{</span>lon<span class="sc">:&gt;12.4f}</span><span class="ss"> </span><span class="sc">{</span>fuso<span class="sc">:&gt;6}</span><span class="ss">  </span><span class="sc">{</span>hemi<span class="sc">:&gt;4}</span><span class="ss">"</span>)</span>
+<span id="cb54-19"><a href="#cb54-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-20"><a href="#cb54-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"="</span> <span class="op">*</span> <span class="dv">66</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>==================================================================
+CIDADE            LAT (graus)  LON (graus)   FUSO  HEMI
+==================================================================
+Sao Paulo            -23.5468     -46.6360     23     S
+Brasilia             -15.7975     -47.8920     23     S
+Manaus                -3.1005     -60.0261     20     S
+Porto Alegre         -30.0346     -51.2177     22     S
+Recife                -8.0476     -34.8770     25     S
+Belem                 -1.4558     -48.5044     22     S
+==================================================================</code></pre>
+</div>
+</div>
+<div id="70e3f4a2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.444012Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.443898Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:47.447241Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:47.446783Z&quot;}}" data-outputid="369af218-c4cd-4b41-b65b-a752f6674cbe">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Matriz de distâncias entre cidades ────────────────────────────────────</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>nomes_c <span class="op">=</span> <span class="bu">list</span>(cidades.keys())</span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="bu">len</span>(nomes_c)</span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Matriz de distâncias (km):</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>header <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span><span class="st">''</span><span class="sc">:&gt;14}</span><span class="ss">"</span> <span class="op">+</span> <span class="st">""</span>.join(<span class="ss">f"</span><span class="sc">{</span>c[:<span class="dv">8</span>]<span class="sc">:&gt;11}</span><span class="ss">"</span> <span class="cf">for</span> c <span class="kw">in</span> nomes_c)</span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(header)</span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="bu">len</span>(header))</span>
+<span id="cb56-10"><a href="#cb56-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-11"><a href="#cb56-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, c1 <span class="kw">in</span> <span class="bu">enumerate</span>(nomes_c):</span>
+<span id="cb56-12"><a href="#cb56-12" aria-hidden="true" tabindex="-1"></a>    linha <span class="op">=</span> <span class="ss">f"</span><span class="sc">{</span>c1<span class="sc">:&lt;14}</span><span class="ss">"</span></span>
+<span id="cb56-13"><a href="#cb56-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> j, c2 <span class="kw">in</span> <span class="bu">enumerate</span>(nomes_c):</span>
+<span id="cb56-14"><a href="#cb56-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> i <span class="op">==</span> j:</span>
+<span id="cb56-15"><a href="#cb56-15" aria-hidden="true" tabindex="-1"></a>            linha <span class="op">+=</span> <span class="ss">f"</span><span class="sc">{</span><span class="st">'---'</span><span class="sc">:&gt;11}</span><span class="ss">"</span></span>
+<span id="cb56-16"><a href="#cb56-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb56-17"><a href="#cb56-17" aria-hidden="true" tabindex="-1"></a>            lat1, lon1 <span class="op">=</span> cidades[c1]</span>
+<span id="cb56-18"><a href="#cb56-18" aria-hidden="true" tabindex="-1"></a>            lat2, lon2 <span class="op">=</span> cidades[c2]</span>
+<span id="cb56-19"><a href="#cb56-19" aria-hidden="true" tabindex="-1"></a>            d <span class="op">=</span> distancia_haversine(lat1, lon1, lat2, lon2) <span class="op">/</span> <span class="dv">1000</span></span>
+<span id="cb56-20"><a href="#cb56-20" aria-hidden="true" tabindex="-1"></a>            linha <span class="op">+=</span> <span class="ss">f"</span><span class="sc">{</span>d<span class="sc">:&gt;11.0f}</span><span class="ss">"</span></span>
+<span id="cb56-21"><a href="#cb56-21" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(linha)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Matriz de distâncias (km):
+
+                 Sao Paul   Brasilia     Manaus   Porto Al     Recife      Belem
+--------------------------------------------------------------------------------
+Sao Paulo             ---        872       2691        853       2131       2465
+Brasilia              872        ---       1938       1619       1656       1596
+Manaus               2691       1938        ---       3135       2836       1293
+Porto Alegre          853       1619       3135        ---       2979       3191
+Recife               2131       1656       2836       2979        ---       1678
+Belem                2465       1596       1293       3191       1678        ---</code></pre>
+</div>
+</div>
+<div id="011f7cf7" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:47.448569Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:47.448454Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:48.809544Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:48.808729Z&quot;}}" data-outputid="406218c6-95c0-4f60-d75f-f3f2b0547aa8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Visualização: mapa das cidades com matplotlib ─────────────────────────</span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">7</span>))</span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a>lats <span class="op">=</span> [v[<span class="dv">0</span>] <span class="cf">for</span> v <span class="kw">in</span> cidades.values()]</span>
+<span id="cb58-8"><a href="#cb58-8" aria-hidden="true" tabindex="-1"></a>lons <span class="op">=</span> [v[<span class="dv">1</span>] <span class="cf">for</span> v <span class="kw">in</span> cidades.values()]</span>
+<span id="cb58-9"><a href="#cb58-9" aria-hidden="true" tabindex="-1"></a>nms  <span class="op">=</span> <span class="bu">list</span>(cidades.keys())</span>
+<span id="cb58-10"><a href="#cb58-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-11"><a href="#cb58-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Pontos</span></span>
+<span id="cb58-12"><a href="#cb58-12" aria-hidden="true" tabindex="-1"></a>ax.scatter(lons, lats, color<span class="op">=</span><span class="st">"steelblue"</span>, s<span class="op">=</span><span class="dv">130</span>, zorder<span class="op">=</span><span class="dv">5</span>, edgecolors<span class="op">=</span><span class="st">"white"</span>, linewidths<span class="op">=</span><span class="fl">1.2</span>)</span>
+<span id="cb58-13"><a href="#cb58-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-14"><a href="#cb58-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Rótulos</span></span>
+<span id="cb58-15"><a href="#cb58-15" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, nome <span class="kw">in</span> <span class="bu">enumerate</span>(nms):</span>
+<span id="cb58-16"><a href="#cb58-16" aria-hidden="true" tabindex="-1"></a>    ax.annotate(nome,</span>
+<span id="cb58-17"><a href="#cb58-17" aria-hidden="true" tabindex="-1"></a>                xy<span class="op">=</span>(lons[i], lats[i]),</span>
+<span id="cb58-18"><a href="#cb58-18" aria-hidden="true" tabindex="-1"></a>                xytext<span class="op">=</span>(<span class="dv">7</span>, <span class="dv">7</span>), textcoords<span class="op">=</span><span class="st">"offset points"</span>,</span>
+<span id="cb58-19"><a href="#cb58-19" aria-hidden="true" tabindex="-1"></a>                fontsize<span class="op">=</span><span class="dv">9</span>, color<span class="op">=</span><span class="st">"#222244"</span>,</span>
+<span id="cb58-20"><a href="#cb58-20" aria-hidden="true" tabindex="-1"></a>                bbox<span class="op">=</span><span class="bu">dict</span>(boxstyle<span class="op">=</span><span class="st">"round,pad=0.2"</span>, fc<span class="op">=</span><span class="st">"white"</span>, alpha<span class="op">=</span><span class="fl">0.6</span>))</span>
+<span id="cb58-21"><a href="#cb58-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-22"><a href="#cb58-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Linhas conectando cidades consecutivas</span></span>
+<span id="cb58-23"><a href="#cb58-23" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(nms) <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb58-24"><a href="#cb58-24" aria-hidden="true" tabindex="-1"></a>    ax.plot([lons[i], lons[i<span class="op">+</span><span class="dv">1</span>]], [lats[i], lats[i<span class="op">+</span><span class="dv">1</span>]],</span>
+<span id="cb58-25"><a href="#cb58-25" aria-hidden="true" tabindex="-1"></a>            <span class="st">"k--"</span>, alpha<span class="op">=</span><span class="fl">0.25</span>, linewidth<span class="op">=</span><span class="fl">0.9</span>)</span>
+<span id="cb58-26"><a href="#cb58-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-27"><a href="#cb58-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Linha do Equador</span></span>
+<span id="cb58-28"><a href="#cb58-28" aria-hidden="true" tabindex="-1"></a>ax.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">"red"</span>, linewidth<span class="op">=</span><span class="fl">0.9</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, alpha<span class="op">=</span><span class="fl">0.6</span>, label<span class="op">=</span><span class="st">"Equador"</span>)</span>
+<span id="cb58-29"><a href="#cb58-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-30"><a href="#cb58-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Linhas de fuso UTM (meridianos centrais: -75, -69, -63, -57, -51, -45, -39, -33)</span></span>
+<span id="cb58-31"><a href="#cb58-31" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> mc <span class="kw">in</span> <span class="bu">range</span>(<span class="op">-</span><span class="dv">75</span>, <span class="op">-</span><span class="dv">27</span>, <span class="dv">6</span>):</span>
+<span id="cb58-32"><a href="#cb58-32" aria-hidden="true" tabindex="-1"></a>    ax.axvline(mc, color<span class="op">=</span><span class="st">"gray"</span>, linewidth<span class="op">=</span><span class="fl">0.5</span>, linestyle<span class="op">=</span><span class="st">":"</span>, alpha<span class="op">=</span><span class="fl">0.4</span>)</span>
+<span id="cb58-33"><a href="#cb58-33" aria-hidden="true" tabindex="-1"></a>ax.axvline(<span class="op">-</span><span class="dv">75</span>, color<span class="op">=</span><span class="st">"gray"</span>, linewidth<span class="op">=</span><span class="fl">0.5</span>, linestyle<span class="op">=</span><span class="st">":"</span>, alpha<span class="op">=</span><span class="fl">0.4</span>, label<span class="op">=</span><span class="st">"Fusos UTM"</span>)</span>
+<span id="cb58-34"><a href="#cb58-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-35"><a href="#cb58-35" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Longitude (graus)"</span>, fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb58-36"><a href="#cb58-36" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">"Latitude (graus)"</span>,  fontsize<span class="op">=</span><span class="dv">11</span>)</span>
+<span id="cb58-37"><a href="#cb58-37" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Localizacao das Cidades - SIRGAS 2000 (meridianos UTM)"</span>,</span>
+<span id="cb58-38"><a href="#cb58-38" aria-hidden="true" tabindex="-1"></a>             fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb58-39"><a href="#cb58-39" aria-hidden="true" tabindex="-1"></a>ax.legend(fontsize<span class="op">=</span><span class="dv">9</span>)</span>
+<span id="cb58-40"><a href="#cb58-40" aria-hidden="true" tabindex="-1"></a>ax.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb58-41"><a href="#cb58-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-42"><a href="#cb58-42" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb58-43"><a href="#cb58-43" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"/home/sandbox/mapa_cidades.png"</span>, dpi<span class="op">=</span><span class="dv">130</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb58-44"><a href="#cb58-44" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb58-45"><a href="#cb58-45" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Figura salva em: mapa_cidades.png"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="logica_programacao_aula1_files/figure-html/cell-31-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Figura salva em: mapa_cidades.png</code></pre>
+</div>
+</div>
+<div id="e42b59fb" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:48.811456Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:48.811192Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:48.813765Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:48.813183Z&quot;}}">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── ✏️ Exercício Final ─────────────────────────────────────────────────────</span></span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Crie uma função chamada relatorio_ponto que receba:</span></span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   nome (str), lat (float), lon (float), alt (float)</span></span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Ela deve exibir um relatório assim:</span></span>
+<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------------------</span></span>
+<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a><span class="co">#  PONTO     : PT-07</span></span>
+<span id="cb60-8"><a href="#cb60-8" aria-hidden="true" tabindex="-1"></a><span class="co">#  Latitude  : -23.550520°   (23d 33' 01.87"  S)</span></span>
+<span id="cb60-9"><a href="#cb60-9" aria-hidden="true" tabindex="-1"></a><span class="co">#  Longitude : -46.633309°   (46d 37' 59.91"  W)</span></span>
+<span id="cb60-10"><a href="#cb60-10" aria-hidden="true" tabindex="-1"></a><span class="co">#  Altitude  :   760.00 m</span></span>
+<span id="cb60-11"><a href="#cb60-11" aria-hidden="true" tabindex="-1"></a><span class="co">#  Fuso UTM  :  23S</span></span>
+<span id="cb60-12"><a href="#cb60-12" aria-hidden="true" tabindex="-1"></a><span class="co"># -------------------------------------------</span></span>
+<span id="cb60-13"><a href="#cb60-13" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb60-14"><a href="#cb60-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Dica – conversão GD -&gt; GMS:</span></span>
+<span id="cb60-15"><a href="#cb60-15" aria-hidden="true" tabindex="-1"></a><span class="co">#   g = int(abs(gd))</span></span>
+<span id="cb60-16"><a href="#cb60-16" aria-hidden="true" tabindex="-1"></a><span class="co">#   m = int((abs(gd) - g) * 60)</span></span>
+<span id="cb60-17"><a href="#cb60-17" aria-hidden="true" tabindex="-1"></a><span class="co">#   s = ((abs(gd) - g) * 60 - m) * 60</span></span>
+<span id="cb60-18"><a href="#cb60-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-19"><a href="#cb60-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Escreva seu código aqui:</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="resumo-da-aula" class="level2">
+<h2 class="anchored" data-anchor-id="resumo-da-aula">📋 Resumo da Aula</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 35%">
+<col style="width: 64%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Conceito</th>
+<th>O que aprendemos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Variáveis</strong></td>
+<td>Armazenam coordenadas, nomes de datum, contagens de pontos</td>
+</tr>
+<tr class="even">
+<td><strong>Tipos</strong></td>
+<td><code>float</code> (coords), <code>int</code> (contagens), <code>str</code> (nomes), <code>bool</code> (flags)</td>
+</tr>
+<tr class="odd">
+<td><strong>Operadores</strong></td>
+<td>Cálculo de áreas, conversão GMS↔︎GD, distâncias planas</td>
+</tr>
+<tr class="even">
+<td><strong>Condicionais</strong></td>
+<td>Hemisfério, fuso UTM, precisão GNSS, cobertura fotogramétrica</td>
+</tr>
+<tr class="odd">
+<td><strong>Repetição</strong></td>
+<td>Processar listas de pontos, relatórios em lote</td>
+</tr>
+<tr class="even">
+<td><strong>Funções</strong></td>
+<td>GMS↔︎GD, Haversine, fuso UTM – código reutilizável</td>
+</tr>
+<tr class="odd">
+<td><strong>Visualização</strong></td>
+<td>Plot de pontos geográficos com meridianos UTM</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<section id="próximos-passos" class="level3">
+<h3 class="anchored" data-anchor-id="próximos-passos">📚 Próximos Passos</h3>
+<ol type="1">
+<li><strong>NumPy</strong> – álgebra linear para ajustamento de observações geodésicas</li>
+<li><strong>Pandas</strong> – leitura e manipulação de arquivos de campo (CSV, XLSX)</li>
+<li><strong>GeoPandas / Shapely</strong> – operações vetoriais com geometrias geoespaciais</li>
+<li><strong>Matplotlib / Folium</strong> – mapas estáticos e interativos no navegador</li>
+<li><strong>QGIS Python Console</strong> – automatização de fluxos cartográficos</li>
+</ol>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 68%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">&gt; <em>“A programação é a ferramenta que transforma dados brutos em informação geográfica.”</em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">PONTO : PT-07 Latitude : -23.550520 (23d 33’ 01.87 S) Longitude : -46.633309 (46d 37’ 59.91 W) Altitude : 760.00 m Fuso UTM : 23S</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">PONTO : PT-08</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Latitude : -15.797500 (15d 47’ 51.00 S)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Longitude : -47.892028 (47d 53’ 31.30 W)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Altitude : 1172.00 m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Fuso UTM : 23S</td>
+</tr>
+</tbody>
+</table>
+<p>``` ::: :::</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Copyright 2026, Mauro Alixandrini</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

@@ -1,0 +1,44 @@
+project:
+  type: website
+
+website:
+  title: "Programação Aplicada a Engenharia de Agrimensura e Cartográfica"
+  page-navigation: true
+  page-footer: "Copyright 2026, Mauro Alixandrini"
+  navbar:
+    logo: logo_labfsr.png
+    left:
+      - href: index.qmd
+        text: Programa
+      - href: logica_programacao_aula1.ipynb
+        text: Aula 1
+      - href: estruturas_dados_cartografia_aula2.ipynb
+        text: Aula 2
+      - href: aula_listas_python_cartografia_aula3.md
+        text: Aula 3     
+      - about.qmd
+  sidebar:
+    logo: logo_labfsr.png
+    left:
+      - href: https://agricarto.ufba.br/index.php
+        text: CEAC
+      - href: index.qmd
+        text: Programa
+      - href: logica_programacao_aula1.ipynb
+        text: Aula 1
+      - href: estruturas_dados_cartografia_aula2.ipynb
+        text: Aula 2
+      - href: aula_listas_python_cartografia_aula3.md
+        text: Aula 3     
+    
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true
+
+
+

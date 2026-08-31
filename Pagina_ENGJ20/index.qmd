@@ -1,0 +1,91 @@
+---
+title: "Programação Aplicada a Engenharia Cartográfica"
+---
+
+### Proposta Didática e Prática
+
+A disciplina pode ser dividida em **três blocos integrados**:
+
+1. **Bloco 1: Fundamentos de Lógica e Estruturas de Dados com Problemas Geodésicos/Cartográficos**
+2. **Bloco 2: Jogos Cartográficos e Ferramentas Interativas CLI/GUI**
+3. **Bloco 3: Automação e Processamento Espacial com PyQGIS**
+
+
+### Bloco 1: Lógica e Algoritmos com Casos de Uso da Engenharia
+
+Em vez de ensinar condicionais, laços e funções com exemplos genéricos, cada conceito lógico é associado a um problema real da agrimensura e cartografia:
+
+| Conceito de Lógica | Aplicação na Agrimensura / Cartografia | Descrição do Projeto / Exercício |
+| --- | --- | --- |
+| **Entrada/Saída e Operadores** | Conversor de Coordenadas Sexagesimais | Converter Graus, Minutos e Segundos (DMS) para Graus Decimais (DD) e vice-versa. |
+| **Estruturas Condicionais** | Verificador de Fuso UTM e Carta Topográfica | Receber a longitude de um ponto e retornar o fuso UTM correspondente (1 a 60) e a hemisfério (N/S). |
+| **Laços de Repetição (`for`/`while`)** | Cálculo de Azimute e Distância entre Pontos | Ler uma lista de coordenadas $N, E$ e calcular azimutes e distâncias acumuladas de um caminhamento. |
+| **Funções e Módulos** | Calculadora de Área por Gauss (Coordenadas) | Implementar a fórmula do shoelace (Gauss) para cálculo de área de polígonos fechados a partir de vértices $(X, Y)$. |
+| **Matrizes e Listas Multidimensionais** | Transformação de Coordenadas 2D | Realizar rotação e translação de coordenadas usando multiplicação de matrizes 2D. |
+| **Manipulação de Arquivos** | Parser de Arquivos CSV / RINEX / GEO | Ler um arquivo `.csv` de caderneta de campo, validar as cotas e exportar um relatório formatado. |
+
+
+### Bloco 2: Jogos Cartográficos e Calculadoras Aplicadas
+
+Substituindo os jogos tradicionais (como Jogo da Velha), os projetos em equipe do meio do semestre focam em mecânicas baseadas em conceitos geográficos e geodésicos, estimulando raciocínio espacial e lógica de controle de fluxo.
+
+#### Exemplos de Jogos Cartográficos:
+
+1. **Batalha Naval Geográfica (UTM Grid Battle):**
+* **Mecânica:** O tabuleiro é uma grade UTM ou SIRGAS 2000 dividida em quadrículas. Os jogadores tentam acertar alvos definidos por coordenadas relativas ou azimute/distância a partir de uma origem.
+
+
+2. **O Desafio do Topógrafo (Nivelamento Simulado):**
+* **Mecânica:** Um jogo em texto/CLI onde o aluno precisa calcular cotas e visadas de ré/vante corretas para "atravessar" um terreno com obstáculos sem acumular erro de fechamento acima da tolerância.
+
+
+3. **Quiz Dinâmico de Projeções e Datum:**
+* **Mecânica:** Um jogo de escolha com verificação condicional de parâmetros geodésicos (ex: identificar deformações de projeção conformes/equivalentes com base em coordenadas testadas).
+
+
+
+#### Calculadoras de Engenharia:
+
+* **Calculadora Helmer / Helmert 2D:** Ajustamento de coordenadas entre dois sistemas locais.
+* **Calculadora de Erro de Fechamento Poligonal:** Cálculo de precisão relativa e distribuição proporcional de erros nas coordenadas.
+
+
+### Bloco 3: Integração do PyQGIS (Stand-alone Scripts e Console)
+
+Conectando diretamente com a abordagem do curso *PyQGIS Masterclass*, este bloco mostra aos alunos como aplicar a lógica aprendida diretamente no ambiente profissional.
+
+#### Projetos de Transição Didática:
+
+1. **Automação de Layouts e Mapas de Ponto:**
+* **Exercício:** Ler um arquivo CSV com coordenadas levantadas em campo, carregar os pontos automaticamente em uma camada vetorial temporária no QGIS e aplicar um estilo graduado.
+
+
+2. **Geoprocessamento em Lote (Batch Processing):**
+* **Exercício:** Criar um script standalone usando `qgis.analysis` ou algoritmos do Processing para aplicar *buffer* e *intersection* em uma pasta cheia de arquivos Shapefile/GeoPackage de imóveis rurais.
+
+
+3. **Gerador Automático de Memorial Descritivo:**
+* **Exercício:** Iterar sobre os vértices de uma feição poligonal no QGIS, extrair as coordenadas SIRGAS 2000, calcular o azimute e a distância entre cada segmento e salvar um arquivo de texto formatado como memorial descritivo.
+
+
+
+
+
+### Proposta de Cronograma (60h)
+
+
+```
+[Semanas 01-04] Lógica Estruturada Básica com Python (Variáveis, Condicionais, Laços)
+               └─ Práticas: Conversores DMS/DD, Fuso UTM, Caderneta de Campo
+
+[Semanas 05-08] Funções, Estruturas de Dados (Vetores/Matrizes) e Arquivos
+               └─ Práticas: Área por Gauss, Ajustamento Básico, Leitura de arquivos GEO/CSV
+
+[Semanas 09-12] Projetos Interativos: Calculadoras Avançadas e Jogos Cartográficos
+               └─ Práticas: Batalha Naval UTM, Calculadora de Fechamento Poligonal
+
+[Semanas 13-16] Introdução ao PyQGIS (Scripts Standalone e PyQGIS Console)
+               └─ Práticas: Automação de camadas, cálculo vetorial e geração de memoriais
+
+```
+

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Aula 1 – Programação Aplicada a Engenharia de Agrimensura e Cartográfica</title>
+<title>Aula 1 – ENGJ20</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,6 +68,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./estruturas_dados_cartografia_aula2.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -79,11 +81,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -110,26 +112,91 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">ENGJ20</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Programa</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bloco-1" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Bloco 1</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-bloco-1">    
+        <li>
+    <a class="dropdown-item" href="./logica_programacao_aula1.html">
+ <span class="dropdown-text">Aula 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./estruturas_dados_cartografia_aula2.html">
+ <span class="dropdown-text">Aula 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./aula_listas_python_cartografia_aula3.html">
+ <span class="dropdown-text">Aula 3</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bloco-2" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Bloco 2</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-bloco-2">    
+        <li>
+    <a class="dropdown-item" href="./about.html">
+ <span class="dropdown-text">Aula 4</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bloco-3" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Bloco 3</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-bloco-3">    
+        <li>
+    <a class="dropdown-item" href="./about.html">
+ <span class="dropdown-text">Aula 10</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">Sobre</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Aula 1</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./logica_programacao_aula1.html">Aula 1</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
@@ -138,11 +205,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <img src="./logo_labfsr.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programa</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./logica_programacao_aula1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Aula 1</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./estruturas_dados_cartografia_aula2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aula 2</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula_listas_python_cartografia_aula3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aula 3</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -186,6 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#próximos-passos" id="toc-próximos-passos" class="nav-link" data-scroll-target="#próximos-passos">📚 Próximos Passos</a></li>
   </ul></li>
+  <li><a href="#gabarito-dos-exercícios" id="toc-gabarito-dos-exercícios" class="nav-link" data-scroll-target="#gabarito-dos-exercícios">🗝️ Gabarito dos Exercícios</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -221,12 +312,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>🗺️ Lógica de Programação com Python</h1>
 <section id="aplicada-à-engenharia-cartográfica" class="level2">
 <h2 class="anchored" data-anchor-id="aplicada-à-engenharia-cartográfica">Aplicada à Engenharia Cartográfica</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://colab.research.google.com/github/Alixandrini/ENGJ20/blob/main/Aula%201/logica_programacao_aula1.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
-<figcaption>Open In Colab</figcaption>
-</figure>
-</div>
+<p><a href="https://colab.research.google.com/github/Alixandrini/ENGJ20/blob/main/Aula%201/logica_programacao_aula1.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
 <table class="caption-top table">
 <tbody>
 <tr class="odd">
@@ -1166,7 +1252,7 @@ Belem                2465       1596       1293       3191       1678        ---
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="logica_programacao_aula1_files/figure-html/cell-31-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="logica_programacao_aula1_files/figure-html/cell-30-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
@@ -1241,7 +1327,6 @@ Belem                2465       1596       1293       3191       1678        ---
 </tr>
 </tbody>
 </table>
-<hr>
 <section id="próximos-passos" class="level3">
 <h3 class="anchored" data-anchor-id="próximos-passos">📚 Próximos Passos</h3>
 <ol type="1">
@@ -1251,44 +1336,160 @@ Belem                2465       1596       1293       3191       1678        ---
 <li><strong>Matplotlib / Folium</strong> – mapas estáticos e interativos no navegador</li>
 <li><strong>QGIS Python Console</strong> – automatização de fluxos cartográficos</li>
 </ol>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 68%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">&gt; <em>“A programação é a ferramenta que transforma dados brutos em informação geográfica.”</em></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">PONTO : PT-07 Latitude : -23.550520 (23d 33’ 01.87 S) Longitude : -46.633309 (46d 37’ 59.91 W) Altitude : 760.00 m Fuso UTM : 23S</td>
-</tr>
-</tbody>
-</table>
-<table class="caption-top table">
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">PONTO : PT-08</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Latitude : -15.797500 (15d 47’ 51.00 S)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Longitude : -47.892028 (47d 53’ 31.30 W)</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Altitude : 1172.00 m</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Fuso UTM : 23S</td>
-</tr>
-</tbody>
-</table>
-<p>``` ::: :::</p>
-
-
+<blockquote class="blockquote">
+<p><em>“A programação é a ferramenta que transforma dados brutos em informação geográfica.”</em></p>
+</blockquote>
 </section>
+</section>
+<section id="gabarito-dos-exercícios" class="level2">
+<h2 class="anchored" data-anchor-id="gabarito-dos-exercícios">🗝️ Gabarito dos Exercícios</h2>
+<p><em>(Consulte somente após tentar resolver!)</em></p>
+<div id="83266be9" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:48.815020Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:48.814900Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:48.817772Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:48.817269Z&quot;}}" data-outputid="35f666e3-eaca-4819-8b92-a1b1cffae033">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb61"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Gabarito – Exercício 1 ────────────────────────────────────────────────</span></span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a>nome_estacao  <span class="op">=</span> <span class="st">"BRAZ"</span>         <span class="co"># Estação RBMC – Brasília</span></span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a>latitude_est  <span class="op">=</span> <span class="op">-</span><span class="fl">15.9474</span>       <span class="co"># graus decimais</span></span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>longitude_est <span class="op">=</span> <span class="op">-</span><span class="fl">47.8779</span>       <span class="co"># graus decimais</span></span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>altitude_est  <span class="op">=</span>  <span class="fl">1106.03</span>       <span class="co"># metros</span></span>
+<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a>ativa         <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-8"><a href="#cb61-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Estacao  : </span><span class="sc">{</span>nome_estacao<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb61-9"><a href="#cb61-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Latitude : </span><span class="sc">{</span>latitude_est<span class="sc">}</span><span class="ss">  graus"</span>)</span>
+<span id="cb61-10"><a href="#cb61-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Longitude: </span><span class="sc">{</span>longitude_est<span class="sc">}</span><span class="ss">  graus"</span>)</span>
+<span id="cb61-11"><a href="#cb61-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Altitude : </span><span class="sc">{</span>altitude_est<span class="sc">}</span><span class="ss"> m"</span>)</span>
+<span id="cb61-12"><a href="#cb61-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Ativa?   : </span><span class="sc">{</span>ativa<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Estacao  : BRAZ
+Latitude : -15.9474  graus
+Longitude: -47.8779  graus
+Altitude : 1106.03 m
+Ativa?   : True</code></pre>
+</div>
+</div>
+<div id="c1ac0ab5" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:48.818951Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:48.818835Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:48.821434Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:48.820998Z&quot;}}" data-outputid="650349d8-c591-497d-f418-f29776a7b252">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb63"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Gabarito – Exercício 2 ────────────────────────────────────────────────</span></span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a>frente <span class="op">=</span> <span class="fl">120.0</span></span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a>fundos <span class="op">=</span> <span class="fl">140.0</span></span>
+<span id="cb63-4"><a href="#cb63-4" aria-hidden="true" tabindex="-1"></a>lat1   <span class="op">=</span>  <span class="fl">80.0</span></span>
+<span id="cb63-5"><a href="#cb63-5" aria-hidden="true" tabindex="-1"></a>lat2   <span class="op">=</span>  <span class="fl">75.0</span></span>
+<span id="cb63-6"><a href="#cb63-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-7"><a href="#cb63-7" aria-hidden="true" tabindex="-1"></a>area_m2  <span class="op">=</span> ((frente <span class="op">+</span> fundos) <span class="op">/</span> <span class="dv">2</span>) <span class="op">*</span> ((lat1 <span class="op">+</span> lat2) <span class="op">/</span> <span class="dv">2</span>)</span>
+<span id="cb63-8"><a href="#cb63-8" aria-hidden="true" tabindex="-1"></a>area_ha  <span class="op">=</span> area_m2 <span class="op">/</span> <span class="dv">10_000</span></span>
+<span id="cb63-9"><a href="#cb63-9" aria-hidden="true" tabindex="-1"></a>area_alq <span class="op">=</span> area_m2 <span class="op">/</span> <span class="dv">24_200</span></span>
+<span id="cb63-10"><a href="#cb63-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-11"><a href="#cb63-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Area: </span><span class="sc">{</span>area_m2<span class="sc">:.2f}</span><span class="ss"> m²  |  </span><span class="sc">{</span>area_ha<span class="sc">:.4f}</span><span class="ss"> ha  |  </span><span class="sc">{</span>area_alq<span class="sc">:.5f}</span><span class="ss"> alqueires"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Area: 10075.00 m²  |  1.0075 ha  |  0.41632 alqueires</code></pre>
+</div>
+</div>
+<div id="9f1133a0" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:48.822701Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:48.822584Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:48.825328Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:48.824828Z&quot;}}" data-outputid="bf5f9f36-6482-4c1c-b2ca-7ab5b7f9b780">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Gabarito – Exercício 3 ────────────────────────────────────────────────</span></span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>longitude_ex <span class="op">=</span> <span class="op">-</span><span class="fl">34.88</span>   <span class="co"># Recife</span></span>
+<span id="cb65-3"><a href="#cb65-3" aria-hidden="true" tabindex="-1"></a>latitude_ex  <span class="op">=</span>  <span class="op">-</span><span class="fl">8.05</span></span>
+<span id="cb65-4"><a href="#cb65-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-5"><a href="#cb65-5" aria-hidden="true" tabindex="-1"></a>fuso_ex <span class="op">=</span> <span class="bu">int</span>((longitude_ex <span class="op">+</span> <span class="dv">180</span>) <span class="op">/</span> <span class="dv">6</span>) <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb65-6"><a href="#cb65-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-7"><a href="#cb65-7" aria-hidden="true" tabindex="-1"></a>territorio <span class="op">=</span> <span class="st">"dentro do territorio brasileiro"</span> <span class="cf">if</span> <span class="dv">18</span> <span class="op">&lt;=</span> fuso_ex <span class="op">&lt;=</span> <span class="dv">25</span>              <span class="cf">else</span> <span class="st">"fora do territorio brasileiro"</span></span>
+<span id="cb65-8"><a href="#cb65-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-9"><a href="#cb65-9" aria-hidden="true" tabindex="-1"></a>hemisferio_ex <span class="op">=</span> <span class="st">"Sul"</span> <span class="cf">if</span> latitude_ex <span class="op">&lt;</span> <span class="dv">0</span> <span class="cf">else</span> <span class="st">"Norte"</span></span>
+<span id="cb65-10"><a href="#cb65-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb65-11"><a href="#cb65-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Fuso UTM    : </span><span class="sc">{</span>fuso_ex<span class="sc">}</span><span class="ss"> – </span><span class="sc">{</span>territorio<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb65-12"><a href="#cb65-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Hemisferio  : </span><span class="sc">{</span>hemisferio_ex<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Fuso UTM    : 25 – dentro do territorio brasileiro
+Hemisferio  : Sul</code></pre>
+</div>
+</div>
+<div id="0756a078" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:48.826515Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:48.826401Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:48.830522Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:48.829930Z&quot;}}" data-outputid="980822b1-b20d-4e12-90d7-ef2e53be687a">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Gabarito – Exercício 4 ────────────────────────────────────────────────</span></span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a>px <span class="op">=</span> pontos_x <span class="op">+</span> [pontos_x[<span class="dv">0</span>]]</span>
+<span id="cb67-5"><a href="#cb67-5" aria-hidden="true" tabindex="-1"></a>py <span class="op">=</span> pontos_y <span class="op">+</span> [pontos_y[<span class="dv">0</span>]]</span>
+<span id="cb67-6"><a href="#cb67-6" aria-hidden="true" tabindex="-1"></a>nm <span class="op">=</span> nomes    <span class="op">+</span> [nomes[<span class="dv">0</span>]]</span>
+<span id="cb67-7"><a href="#cb67-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-8"><a href="#cb67-8" aria-hidden="true" tabindex="-1"></a>perimetro <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb67-9"><a href="#cb67-9" aria-hidden="true" tabindex="-1"></a>maior_d   <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb67-10"><a href="#cb67-10" aria-hidden="true" tabindex="-1"></a>menor_d   <span class="op">=</span> <span class="bu">float</span>(<span class="st">"inf"</span>)</span>
+<span id="cb67-11"><a href="#cb67-11" aria-hidden="true" tabindex="-1"></a>par_maior <span class="op">=</span> (<span class="st">""</span>, <span class="st">""</span>)</span>
+<span id="cb67-12"><a href="#cb67-12" aria-hidden="true" tabindex="-1"></a>par_menor <span class="op">=</span> (<span class="st">""</span>, <span class="st">""</span>)</span>
+<span id="cb67-13"><a href="#cb67-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-14"><a href="#cb67-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(nm) <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb67-15"><a href="#cb67-15" aria-hidden="true" tabindex="-1"></a>    dx <span class="op">=</span> px[i<span class="op">+</span><span class="dv">1</span>] <span class="op">-</span> px[i]</span>
+<span id="cb67-16"><a href="#cb67-16" aria-hidden="true" tabindex="-1"></a>    dy <span class="op">=</span> py[i<span class="op">+</span><span class="dv">1</span>] <span class="op">-</span> py[i]</span>
+<span id="cb67-17"><a href="#cb67-17" aria-hidden="true" tabindex="-1"></a>    d  <span class="op">=</span> math.sqrt(dx<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> dy<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb67-18"><a href="#cb67-18" aria-hidden="true" tabindex="-1"></a>    perimetro <span class="op">+=</span> d</span>
+<span id="cb67-19"><a href="#cb67-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> d <span class="op">&gt;</span> maior_d:</span>
+<span id="cb67-20"><a href="#cb67-20" aria-hidden="true" tabindex="-1"></a>        maior_d, par_maior <span class="op">=</span> d, (nm[i], nm[i<span class="op">+</span><span class="dv">1</span>])</span>
+<span id="cb67-21"><a href="#cb67-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> d <span class="op">&lt;</span> menor_d:</span>
+<span id="cb67-22"><a href="#cb67-22" aria-hidden="true" tabindex="-1"></a>        menor_d, par_menor <span class="op">=</span> d, (nm[i], nm[i<span class="op">+</span><span class="dv">1</span>])</span>
+<span id="cb67-23"><a href="#cb67-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-24"><a href="#cb67-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Perimetro total : </span><span class="sc">{</span>perimetro<span class="sc">:.3f}</span><span class="ss"> m"</span>)</span>
+<span id="cb67-25"><a href="#cb67-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Maior distancia : </span><span class="sc">{</span>maior_d<span class="sc">:.3f}</span><span class="ss"> m  (</span><span class="sc">{</span>par_maior[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> -&gt; </span><span class="sc">{</span>par_maior[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb67-26"><a href="#cb67-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Menor distancia : </span><span class="sc">{</span>menor_d<span class="sc">:.3f}</span><span class="ss"> m  (</span><span class="sc">{</span>par_menor[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> -&gt; </span><span class="sc">{</span>par_menor[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">)"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Perimetro total : 2590.325 m
+Maior distancia : 651.261 m  (PT-01 -&gt; PT-02)
+Menor distancia : 393.126 m  (PT-02 -&gt; PT-03)</code></pre>
+</div>
+</div>
+<div id="b947b9dd" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-26T23:18:48.832007Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-26T23:18:48.831869Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-26T23:18:48.837443Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-26T23:18:48.836048Z&quot;}}" data-outputid="15f816e8-7f2e-4dad-c46b-6b0fa50ead00">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Gabarito – Exercício Final ────────────────────────────────────────────</span></span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> decimal_para_gms(dd):</span>
+<span id="cb69-4"><a href="#cb69-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''Converte graus decimais para (graus, minutos, segundos, direcao).'''</span></span>
+<span id="cb69-5"><a href="#cb69-5" aria-hidden="true" tabindex="-1"></a>    direcao <span class="op">=</span> <span class="st">"N"</span> <span class="cf">if</span> dd <span class="op">&gt;=</span> <span class="dv">0</span> <span class="cf">else</span> <span class="st">"S"</span></span>
+<span id="cb69-6"><a href="#cb69-6" aria-hidden="true" tabindex="-1"></a>    dd_abs  <span class="op">=</span> <span class="bu">abs</span>(dd)</span>
+<span id="cb69-7"><a href="#cb69-7" aria-hidden="true" tabindex="-1"></a>    g <span class="op">=</span> <span class="bu">int</span>(dd_abs)</span>
+<span id="cb69-8"><a href="#cb69-8" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> <span class="bu">int</span>((dd_abs <span class="op">-</span> g) <span class="op">*</span> <span class="dv">60</span>)</span>
+<span id="cb69-9"><a href="#cb69-9" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> ((dd_abs <span class="op">-</span> g) <span class="op">*</span> <span class="dv">60</span> <span class="op">-</span> m) <span class="op">*</span> <span class="dv">60</span></span>
+<span id="cb69-10"><a href="#cb69-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> g, m, s, direcao</span>
+<span id="cb69-11"><a href="#cb69-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-12"><a href="#cb69-12" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> decimal_para_gms_lon(dd):</span>
+<span id="cb69-13"><a href="#cb69-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''Igual à anterior mas para longitude (E/W).'''</span></span>
+<span id="cb69-14"><a href="#cb69-14" aria-hidden="true" tabindex="-1"></a>    direcao <span class="op">=</span> <span class="st">"E"</span> <span class="cf">if</span> dd <span class="op">&gt;=</span> <span class="dv">0</span> <span class="cf">else</span> <span class="st">"W"</span></span>
+<span id="cb69-15"><a href="#cb69-15" aria-hidden="true" tabindex="-1"></a>    dd_abs  <span class="op">=</span> <span class="bu">abs</span>(dd)</span>
+<span id="cb69-16"><a href="#cb69-16" aria-hidden="true" tabindex="-1"></a>    g <span class="op">=</span> <span class="bu">int</span>(dd_abs)</span>
+<span id="cb69-17"><a href="#cb69-17" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> <span class="bu">int</span>((dd_abs <span class="op">-</span> g) <span class="op">*</span> <span class="dv">60</span>)</span>
+<span id="cb69-18"><a href="#cb69-18" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> ((dd_abs <span class="op">-</span> g) <span class="op">*</span> <span class="dv">60</span> <span class="op">-</span> m) <span class="op">*</span> <span class="dv">60</span></span>
+<span id="cb69-19"><a href="#cb69-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> g, m, s, direcao</span>
+<span id="cb69-20"><a href="#cb69-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-21"><a href="#cb69-21" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> relatorio_ponto(nome, lat, lon, alt):</span>
+<span id="cb69-22"><a href="#cb69-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''Exibe um relatorio geodesico formatado de um ponto.'''</span></span>
+<span id="cb69-23"><a href="#cb69-23" aria-hidden="true" tabindex="-1"></a>    lg, lm, ls, ld <span class="op">=</span> decimal_para_gms(lat)</span>
+<span id="cb69-24"><a href="#cb69-24" aria-hidden="true" tabindex="-1"></a>    og, om, os_,od <span class="op">=</span> decimal_para_gms_lon(lon)</span>
+<span id="cb69-25"><a href="#cb69-25" aria-hidden="true" tabindex="-1"></a>    fuso, hemi     <span class="op">=</span> calcular_fuso_utm(lon, lat)</span>
+<span id="cb69-26"><a href="#cb69-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-27"><a href="#cb69-27" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">48</span>)</span>
+<span id="cb69-28"><a href="#cb69-28" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f" PONTO     : </span><span class="sc">{</span>nome<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb69-29"><a href="#cb69-29" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f" Latitude  : </span><span class="sc">{</span>lat<span class="sc">:&gt;11.6f}</span><span class="ss">   (</span><span class="sc">{</span>lg<span class="sc">}</span><span class="ss">d </span><span class="sc">{</span>lm<span class="sc">:02d}</span><span class="ss">' </span><span class="sc">{</span>ls<span class="sc">:05.2f}</span><span class="ss">  </span><span class="sc">{</span>ld<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb69-30"><a href="#cb69-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f" Longitude : </span><span class="sc">{</span>lon<span class="sc">:&gt;11.6f}</span><span class="ss">   (</span><span class="sc">{</span>og<span class="sc">}</span><span class="ss">d </span><span class="sc">{</span>om<span class="sc">:02d}</span><span class="ss">' </span><span class="sc">{</span>os_<span class="sc">:05.2f}</span><span class="ss">  </span><span class="sc">{</span>od<span class="sc">}</span><span class="ss">)"</span>)</span>
+<span id="cb69-31"><a href="#cb69-31" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f" Altitude  : </span><span class="sc">{</span>alt<span class="sc">:&gt;9.2f}</span><span class="ss"> m"</span>)</span>
+<span id="cb69-32"><a href="#cb69-32" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f" Fuso UTM  :  </span><span class="sc">{</span>fuso<span class="sc">}{</span>hemi<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb69-33"><a href="#cb69-33" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">48</span>)</span>
+<span id="cb69-34"><a href="#cb69-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-35"><a href="#cb69-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb69-36"><a href="#cb69-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Testes</span></span>
+<span id="cb69-37"><a href="#cb69-37" aria-hidden="true" tabindex="-1"></a>relatorio_ponto(<span class="st">"PT-07"</span>, <span class="op">-</span><span class="fl">23.550520</span>, <span class="op">-</span><span class="fl">46.633309</span>, <span class="fl">760.0</span>)</span>
+<span id="cb69-38"><a href="#cb69-38" aria-hidden="true" tabindex="-1"></a>relatorio_ponto(<span class="st">"PT-08"</span>, lat_bsb, lon_bsb, <span class="fl">1172.0</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>------------------------------------------------
+ PONTO     : PT-07
+ Latitude  :  -23.550520   (23d 33' 01.87  S)
+ Longitude :  -46.633309   (46d 37' 59.91  W)
+ Altitude  :    760.00 m
+ Fuso UTM  :  23S
+------------------------------------------------
+------------------------------------------------
+ PONTO     : PT-08
+ Latitude  :  -15.797500   (15d 47' 51.00  S)
+ Longitude :  -47.892028   (47d 53' 31.30  W)
+ Altitude  :   1172.00 m
+ Fuso UTM  :  23S
+------------------------------------------------</code></pre>
+</div>
+</div>
+
+
 </section>
 </section>
 
@@ -1693,6 +1894,18 @@ Belem                2465       1596       1293       3191       1678        ---
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Programa">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Programa</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./estruturas_dados_cartografia_aula2.html" class="pagination-link" aria-label="Aula 2">
+        <span class="nav-page-text">Aula 2</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

@@ -12,7 +12,7 @@ title: Aula 3
 > **Ambiente:** Google Colab / Jupyter Notebook  
 > **Pré-requisitos:** Noções básicas de Python (variáveis, tipos de dados, operadores)
 
----
+[![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Alixandrini/ENGJ20/blob/main/Aula%203/aula_listas_python_cartografia_aula3.md)
 
 ## 📋 Plano de Aula
 

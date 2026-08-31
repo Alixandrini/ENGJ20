@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Aula 3 – Programação Aplicada a Engenharia de Agrimensura e Cartográfica</title>
+<title>Aula 3 – ENGJ20</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,6 +68,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./estruturas_dados_cartografia_aula2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -79,11 +80,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -110,26 +111,91 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">ENGJ20</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Programa</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bloco-1" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Bloco 1</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-bloco-1">    
+        <li>
+    <a class="dropdown-item" href="./logica_programacao_aula1.html">
+ <span class="dropdown-text">Aula 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./estruturas_dados_cartografia_aula2.html">
+ <span class="dropdown-text">Aula 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./aula_listas_python_cartografia_aula3.html">
+ <span class="dropdown-text">Aula 3</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bloco-2" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Bloco 2</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-bloco-2">    
+        <li>
+    <a class="dropdown-item" href="./about.html">
+ <span class="dropdown-text">Aula 4</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bloco-3" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Bloco 3</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-bloco-3">    
+        <li>
+    <a class="dropdown-item" href="./about.html">
+ <span class="dropdown-text">Aula 10</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">Sobre</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Aula 3</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./aula_listas_python_cartografia_aula3.html">Aula 3</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
@@ -138,11 +204,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <img src="./logo_labfsr.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programa</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./logica_programacao_aula1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aula 1</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./estruturas_dados_cartografia_aula2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aula 2</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula_listas_python_cartografia_aula3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Aula 3</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -241,7 +330,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <strong>Ambiente:</strong> Google Colab / Jupyter Notebook<br>
 <strong>Pré-requisitos:</strong> Noções básicas de Python (variáveis, tipos de dados, operadores)</p>
 </blockquote>
-<hr>
+<p><a href="https://colab.research.google.com/github/Alixandrini/ENGJ20/blob/main/Aula%203/aula_listas_python_cartografia_aula3.md"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
 <section id="plano-de-aula" class="level2">
 <h2 class="anchored" data-anchor-id="plano-de-aula">📋 Plano de Aula</h2>
 <table class="caption-top table">
@@ -1255,6 +1344,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./estruturas_dados_cartografia_aula2.html" class="pagination-link" aria-label="Aula 2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Aula 2</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

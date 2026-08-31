@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Aula 2 – Programação Aplicada a Engenharia de Agrimensura e Cartográfica</title>
+<title>Aula 2 – ENGJ20</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -68,6 +68,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./aula_listas_python_cartografia_aula3.html" rel="next">
+<link href="./logica_programacao_aula1.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -79,11 +81,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 50,
   "keyboard-shortcut": [
     "f",
@@ -110,26 +112,91 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-sidebar floating quarto-light">
+<body class="nav-sidebar floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">ENGJ20</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Programa</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bloco-1" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Bloco 1</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-bloco-1">    
+        <li>
+    <a class="dropdown-item" href="./logica_programacao_aula1.html">
+ <span class="dropdown-text">Aula 1</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./estruturas_dados_cartografia_aula2.html">
+ <span class="dropdown-text">Aula 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./aula_listas_python_cartografia_aula3.html">
+ <span class="dropdown-text">Aula 3</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bloco-2" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Bloco 2</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-bloco-2">    
+        <li>
+    <a class="dropdown-item" href="./about.html">
+ <span class="dropdown-text">Aula 4</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-bloco-3" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Bloco 3</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-bloco-3">    
+        <li>
+    <a class="dropdown-item" href="./about.html">
+ <span class="dropdown-text">Aula 10</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">Sobre</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Aula 2</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./estruturas_dados_cartografia_aula2.html">Aula 2</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
     </div>
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
@@ -138,11 +205,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <img src="./logo_labfsr.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Programa</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./logica_programacao_aula1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aula 1</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./estruturas_dados_cartografia_aula2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Aula 2</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aula_listas_python_cartografia_aula3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Aula 3</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -186,6 +276,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#comparativo-de-operações" id="toc-comparativo-de-operações" class="nav-link" data-scroll-target="#comparativo-de-operações">Comparativo de operações</a></li>
   <li><a href="#próximos-passos" id="toc-próximos-passos" class="nav-link" data-scroll-target="#próximos-passos">📚 Próximos Passos</a></li>
   </ul></li>
+  <li><a href="#gabarito-dos-exercícios" id="toc-gabarito-dos-exercícios" class="nav-link" data-scroll-target="#gabarito-dos-exercícios">🗝️ Gabarito dos Exercícios</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -221,12 +312,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>🗺️ Estruturas Básicas de Dados em Python</h1>
 <section id="aula-2-aplicada-à-engenharia-cartográfica" class="level2">
 <h2 class="anchored" data-anchor-id="aula-2-aplicada-à-engenharia-cartográfica">Aula 2 — Aplicada à Engenharia Cartográfica</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://github.com/Alixandrini/ENGJ20/blob/main/Aula%202/estruturas_dados_cartografia.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid figure-img"></a></p>
-<figcaption>image</figcaption>
-</figure>
-</div>
+<p><a href="https://github.com/Alixandrini/ENGJ20/blob/main/Aula%202/estruturas_dados_cartografia.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
 <table class="caption-top table">
 <tbody>
 <tr class="odd">
@@ -290,7 +376,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<hr>
 <blockquote class="blockquote">
 <p>💡 <strong>Por que estruturas de dados importam para a Cartografia?</strong> Dados geoespaciais são naturalmente complexos: um levantamento tem vários pontos, cada ponto tem coordenadas, cada coordenada tem componentes. Saber organizar esses dados em estruturas adequadas é fundamental para qualquer aplicação em SIG, geodésia, fotogrametria ou topografia.</p>
 </blockquote>
@@ -1568,7 +1653,6 @@ Estrutura de uma feature:
 </tr>
 </tbody>
 </table>
-<hr>
 </section>
 <section id="próximos-passos" class="level3">
 <h3 class="anchored" data-anchor-id="próximos-passos">📚 Próximos Passos</h3>
@@ -1579,137 +1663,246 @@ Estrutura de uma feature:
 <li><strong>JSON / GeoJSON</strong> — persistência de estruturas aninhadas (já praticamos hoje!)</li>
 <li><strong>SQLite / PostGIS</strong> — bancos de dados para grandes volumes de dados cartográficos</li>
 </ol>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 5%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>&gt; <em>“Escolher a estrutura de dados certa é a primeira decisão de um bom programador cartográfico.”</em></td>
-</tr>
-<tr class="even">
-<td>## 🗝️ Gabarito dos Exercícios <em>(Consulte somente após tentar resolver!)</em></td>
-</tr>
-<tr class="odd">
-<td>::: {#44d2f0d8 .cell quarto-private-1=‘{“key”:“execution”,“value”:{“iopub.execute_input”:“2026-08-27T11:25:12.036659Z”,“iopub.status.busy”:“2026-08-27T11:25:12.036529Z”,“iopub.status.idle”:“2026-08-27T11:25:12.040654Z”,“shell.execute_reply”:“2026-08-27T11:25:12.040026Z”}}’ outputId=‘b84a47fd-a157-4ed7-81d2-d9ca2f552537’} ``` {.python .cell-code} # ── Gabarito — Exercicio 1 ──────────────────────────────────────────────────── pontos_ex = [“V-01”,“V-02”,“V-03”,“V-04”,“V-05”,“V-06”,“V-07”] erros_m = [0.032, 0.071, 0.018, 0.089, 0.045, 0.062, 0.011]</td>
-</tr>
-<tr class="even">
-<td># a) Pontos com erro &gt; 0.05 m alerta = [(pontos_ex[i], erros_m[i]) for i in range(len(erros_m)) if erros_m[i] &gt; 0.05] print(“Pontos com erro &gt; 0.05 m:”) for nome, erro in alerta: print(f” {nome}: {erro:.3f} m”)</td>
-</tr>
-<tr class="odd">
-<td># b) Media dos erros media = sum(erros_m) / len(erros_m) print(f”Media dos erros: {media:.4f} m”)</td>
-</tr>
-<tr class="even">
-<td># c) Pontos em ordem decrescente de erro # zip para manter associacao ponto-erro, sorted pelo erro (decrescente) pares = sorted(zip(pontos_ex, erros_m), key=lambda x: x[1], reverse=True) print(“Pontos por ordem decrescente de erro:”) for nome, erro in pares: print(f” {nome}: {erro:.3f} m”)</td>
-</tr>
-<tr class="odd">
-<td>```</td>
-</tr>
-<tr class="even">
-<td>::: {.cell-output .cell-output-stdout}</td>
-</tr>
-<tr class="odd">
-<td>::: {#5bac1b6a .cell quarto-private-1=‘{“key”:“execution”,“value”:{“iopub.execute_input”:“2026-08-27T11:25:12.042035Z”,“iopub.status.busy”:“2026-08-27T11:25:12.041901Z”,“iopub.status.idle”:“2026-08-27T11:25:12.045894Z”,“shell.execute_reply”:“2026-08-27T11:25:12.045265Z”}}’ outputId=‘bfb645df-9f2f-4330-cf67-7b61c40c18f3’} ``` {.python .cell-code} # ── Gabarito — Exercicio 2 ──────────────────────────────────────────────────── import math</td>
-</tr>
-<tr class="even">
-<td>vertices = [ (685100.0, 7460200.0), (685340.0, 7460200.0), (685340.0, 7459950.0), (685100.0, 7459950.0),]</td>
-</tr>
-<tr class="odd">
-<td># a) e b) Perimetro perimetro = 0.0 n = len(vertices) for i in range(n): e1, n1 = vertices[i] e2, n2 = vertices[(i + 1) % n] # indice circular perimetro += math.sqrt((e2-e1)<strong>2 + (n2-n1)</strong>2)</td>
-</tr>
-<tr class="even">
-<td># c) Area pela formula de Gauss (Shoelace) area = 0.0 for i in range(n): xi = vertices[i][0] yi_p = vertices[(i + 1) % n][1] yi_m = vertices[(i - 1) % n][1] area += xi * (yi_p - yi_m) area = abs(area) / 2</td>
-</tr>
-<tr class="odd">
-<td>print(f”Perimetro : {perimetro:.2f} m”) print(f”Area : {area:.2f} m2 | {area/10000:.4f} ha”)</td>
-</tr>
-<tr class="even">
-<td>```</td>
-</tr>
-<tr class="odd">
-<td>::: {.cell-output .cell-output-stdout}</td>
-</tr>
-<tr class="even">
-<td>::: {#8e19189b .cell quarto-private-1=‘{“key”:“execution”,“value”:{“iopub.execute_input”:“2026-08-27T11:25:12.047250Z”,“iopub.status.busy”:“2026-08-27T11:25:12.047113Z”,“iopub.status.idle”:“2026-08-27T11:25:12.050344Z”,“shell.execute_reply”:“2026-08-27T11:25:12.049632Z”}}’ outputId=‘84c43a39-7a49-41a8-cd9a-0ffe5576773f’} ``` {.python .cell-code} # ── Gabarito — Exercicio 3 ──────────────────────────────────────────────────── A = {“PT-01”, “PT-02”, “PT-03”, “PT-05”, “PT-07”, “PT-09”} B = {“PT-02”, “PT-04”, “PT-05”, “PT-06”, “PT-08”, “PT-10”}</td>
-</tr>
-<tr class="odd">
-<td>print(“a) Levantados por AMBOS:”, sorted(A &amp; B)) print(“b) Apenas pelo tecnico A:”, sorted(A - B)) print(“c) Por apenas UM tecnico:”, sorted(A ^ B)) print(f”d) Total de pontos unicos: {len(A | B)}“)</td>
-</tr>
-<tr class="even">
-<td>```</td>
-</tr>
-<tr class="odd">
-<td>::: {.cell-output .cell-output-stdout}</td>
-</tr>
-<tr class="even">
-<td>::: {#c0cde745 .cell quarto-private-1=‘{“key”:“execution”,“value”:{“iopub.execute_input”:“2026-08-27T11:25:12.051608Z”,“iopub.status.busy”:“2026-08-27T11:25:12.051479Z”,“iopub.status.idle”:“2026-08-27T11:25:12.054917Z”,“shell.execute_reply”:“2026-08-27T11:25:12.054160Z”}}’ outputId=‘5591630f-804b-4b4b-82a2-352d0cece959’} ``` {.python .cell-code} # ── Gabarito — Exercicio 4 ──────────────────────────────────────────────────── lev = { “responsavel” : “Carlos Menezes”, “data” : “2024-08-20”, “metodo” : “poligonal fechada”, “num_pontos” : 12, “precisao_m” : 0.05, “datum” : “SIRGAS2000”, “aprovado” : False, }</td>
-</tr>
-<tr class="odd">
-<td>print(“=== Levantamento ===”) for chave, valor in lev.items(): print(f” {chave:&lt;14}: {valor}“)</td>
-</tr>
-<tr class="even">
-<td># b) Atualizar aprovado lev[“aprovado”] = True print(f”aprovado atualizado para: {lev[‘aprovado’]}“)</td>
-</tr>
-<tr class="odd">
-<td># c) Adicionar arquivo lev[“arquivo”] = “levantamento_centro_2024.shp” print(f” arquivo adicionado : {lev[‘arquivo’]}“)</td>
-</tr>
-<tr class="even">
-<td>```</td>
-</tr>
-<tr class="odd">
-<td>::: {.cell-output .cell-output-stdout}</td>
-</tr>
-<tr class="even">
-<td>::: {#7b754377 .cell quarto-private-1=‘{“key”:“execution”,“value”:{“iopub.execute_input”:“2026-08-27T11:25:12.056228Z”,“iopub.status.busy”:“2026-08-27T11:25:12.056096Z”,“iopub.status.idle”:“2026-08-27T11:25:12.303645Z”,“shell.execute_reply”:“2026-08-27T11:25:12.302616Z”}}’ outputId=‘e91660c3-ef00-4c85-c5cd-785d3fae6240’} ``` {.python .cell-code} # ── Gabarito — Exercicio Final (versao base) ───────────────────────────────── import math, matplotlib.pyplot as plt import matplotlib.patches as mpatch</td>
-</tr>
-<tr class="odd">
-<td>def shoelace(verts): n = len(verts) area = 0.0 for i in range(n): xi = verts[i][0] yi_p = verts[(i+1) % n][1] yi_m = verts[(i-1) % n][1] area += xi * (yi_p - yi_m) return abs(area) / 2</td>
-</tr>
-<tr class="even">
-<td>cadastro = { “responsavel”: “Equipe Cartografia UFPR”, “data” : “2024-09-10”, “datum” : “SIRGAS2000”, “fuso” : 22, “municipio” : “Curitiba”, }</td>
-</tr>
-<tr class="odd">
-<td>lotes = [ { “id” : “LOTE-001”, “proprietario”: “Jose Silva”, “vertices” : [(1000.0,1000.0),(1040.0,1000.0),(1040.0,1025.0),(1000.0,1025.0)], “usos” : {“residencial”, “garagem”}, }, { “id” : “LOTE-002”, “proprietario”: “Maria Oliveira”, “vertices” : [(1040.0,1000.0),(1090.0,1000.0),(1090.0,1030.0),(1040.0,1030.0)], “usos” : {“comercial”, “residencial”}, }, { “id” : “LOTE-003”, “proprietario”: “Carlos Costa”, “vertices” : [(1000.0,1025.0),(1040.0,1025.0),(1090.0,1030.0),(1000.0,1060.0)], “usos” : {“residencial”}, },]</td>
-</tr>
-<tr class="even">
-<td># Calcular areas for lote in lotes: lote[“area_m2”] = shoelace(lote[“vertices”])</td>
-</tr>
-<tr class="odd">
-<td># Relatorio print(“=== Relatorio Cadastral ===”) print(f”Municipio: {cadastro[‘municipio’]} | Datum: {cadastro[‘datum’]} | Fuso: {cadastro[‘fuso’]}“) print() print(f”{‘Lote’:&lt;10} {‘Proprietario’:&lt;20} {‘Area (m2)’:&gt;10} {‘Usos’}“) print(”-” * 60) for lote in lotes: usos_str = “,”.join(sorted(lote[“usos”])) print(f”{lote[‘id’]:&lt;10} {lote[‘proprietario’]:&lt;20} {lote[‘area_m2’]:&gt;10.2f} {usos_str}“)</td>
-</tr>
-<tr class="even">
-<td>print() total_area = sum(l[“area_m2”] for l in lotes) print(f”Area total: {total_area:.2f} m2 ({total_area/10000:.4f} ha)“)</td>
-</tr>
-<tr class="odd">
-<td># Visualizacao dos lotes fig, ax = plt.subplots(figsize=(8, 6)) cores_lote = [“#3498db”, “#e74c3c”, “#2ecc71”] for lote, cor in zip(lotes, cores_lote): verts = lote[“vertices”] + [lote[“vertices”][0]] xs = [v[0] for v in verts] ys = [v[1] for v in verts] ax.fill(xs[:-1], ys[:-1], color=cor, alpha=0.4) ax.plot(xs, ys, color=cor, linewidth=1.5) cx = sum(v[0] for v in lote[“vertices”]) / len(lote[“vertices”]) cy = sum(v[1] for v in lote[“vertices”]) / len(lote[“vertices”]) ax.text(cx, cy, f”{lote[‘id’]} - {lote[‘area_m2’]:.0f} m2”, ha=“center”, va=“center”, fontsize=8, fontweight=“bold”)</td>
-</tr>
-<tr class="even">
-<td>ax.set_xlabel(“Este (m)”); ax.set_ylabel(“Norte (m)”) ax.set_title(“Planta de Lotes — Levantamento Cadastral”, fontweight=“bold”) ax.set_aspect(“equal”); ax.grid(True, alpha=0.3) plt.tight_layout() plt.savefig(“/home/sandbox/planta_cadastral.png”, dpi=130, bbox_inches=“tight”) plt.show() print(“Planta salva: planta_cadastral.png”)</td>
-</tr>
-<tr class="odd">
-<td>```</td>
-</tr>
-<tr class="even">
-<td>::: {.cell-output .cell-output-stdout} ``` === Relatorio Cadastral === Municipio: Curitiba | Datum: SIRGAS2000 | Fuso: 22</td>
-</tr>
-<tr class="odd">
-<td>Lote Proprietario Area (m2) Usos</td>
-</tr>
-</tbody>
-</table>
-<p>LOTE-001 Jose Silva 1000.00 garagem, residencial LOTE-002 Maria Oliveira 1500.00 comercial, residencial LOTE-003 Carlos Costa 1675.00 residencial</p>
-<p>Area total: 4175.00 m2 (0.4175 ha)</p>
-<pre><code>:::
-
-::: {.cell-output .cell-output-display}
-![](estruturas_dados_cartografia_aula2_files/figure-html/cell-41-output-2.png){}
-:::
-
-::: {.cell-output .cell-output-stdout}</code></pre>
-<p>Planta salva: planta_cadastral.png ``` ::: :::</p>
-
-
+<blockquote class="blockquote">
+<p><em>“Escolher a estrutura de dados certa é a primeira decisão de um bom programador cartográfico.”</em></p>
+</blockquote>
 </section>
+</section>
+<section id="gabarito-dos-exercícios" class="level2">
+<h2 class="anchored" data-anchor-id="gabarito-dos-exercícios">🗝️ Gabarito dos Exercícios</h2>
+<p><em>(Consulte somente após tentar resolver!)</em></p>
+<div id="44d2f0d8" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-27T11:25:12.036659Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-27T11:25:12.036529Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-27T11:25:12.040654Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-27T11:25:12.040026Z&quot;}}" data-outputid="b84a47fd-a157-4ed7-81d2-d9ca2f552537">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb73"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Gabarito — Exercicio 1 ────────────────────────────────────────────────────</span></span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>pontos_ex <span class="op">=</span> [<span class="st">"V-01"</span>,<span class="st">"V-02"</span>,<span class="st">"V-03"</span>,<span class="st">"V-04"</span>,<span class="st">"V-05"</span>,<span class="st">"V-06"</span>,<span class="st">"V-07"</span>]</span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a>erros_m   <span class="op">=</span> [<span class="fl">0.032</span>, <span class="fl">0.071</span>, <span class="fl">0.018</span>, <span class="fl">0.089</span>, <span class="fl">0.045</span>, <span class="fl">0.062</span>, <span class="fl">0.011</span>]</span>
+<span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-5"><a href="#cb73-5" aria-hidden="true" tabindex="-1"></a><span class="co"># a) Pontos com erro &gt; 0.05 m</span></span>
+<span id="cb73-6"><a href="#cb73-6" aria-hidden="true" tabindex="-1"></a>alerta <span class="op">=</span> [(pontos_ex[i], erros_m[i]) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(erros_m)) <span class="cf">if</span> erros_m[i] <span class="op">&gt;</span> <span class="fl">0.05</span>]</span>
+<span id="cb73-7"><a href="#cb73-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Pontos com erro &gt; 0.05 m:"</span>)</span>
+<span id="cb73-8"><a href="#cb73-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> nome, erro <span class="kw">in</span> alerta:</span>
+<span id="cb73-9"><a href="#cb73-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  </span><span class="sc">{</span>nome<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>erro<span class="sc">:.3f}</span><span class="ss"> m"</span>)</span>
+<span id="cb73-10"><a href="#cb73-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-11"><a href="#cb73-11" aria-hidden="true" tabindex="-1"></a><span class="co"># b) Media dos erros</span></span>
+<span id="cb73-12"><a href="#cb73-12" aria-hidden="true" tabindex="-1"></a>media <span class="op">=</span> <span class="bu">sum</span>(erros_m) <span class="op">/</span> <span class="bu">len</span>(erros_m)</span>
+<span id="cb73-13"><a href="#cb73-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Media dos erros: </span><span class="sc">{</span>media<span class="sc">:.4f}</span><span class="ss"> m"</span>)</span>
+<span id="cb73-14"><a href="#cb73-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-15"><a href="#cb73-15" aria-hidden="true" tabindex="-1"></a><span class="co"># c) Pontos em ordem decrescente de erro</span></span>
+<span id="cb73-16"><a href="#cb73-16" aria-hidden="true" tabindex="-1"></a><span class="co"># zip para manter associacao ponto-erro, sorted pelo erro (decrescente)</span></span>
+<span id="cb73-17"><a href="#cb73-17" aria-hidden="true" tabindex="-1"></a>pares <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">zip</span>(pontos_ex, erros_m), key<span class="op">=</span><span class="kw">lambda</span> x: x[<span class="dv">1</span>], reverse<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb73-18"><a href="#cb73-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Pontos por ordem decrescente de erro:"</span>)</span>
+<span id="cb73-19"><a href="#cb73-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> nome, erro <span class="kw">in</span> pares:</span>
+<span id="cb73-20"><a href="#cb73-20" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  </span><span class="sc">{</span>nome<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>erro<span class="sc">:.3f}</span><span class="ss"> m"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Pontos com erro &gt; 0.05 m:
+  V-02: 0.071 m
+  V-04: 0.089 m
+  V-06: 0.062 m
+Media dos erros: 0.0469 m
+Pontos por ordem decrescente de erro:
+  V-04: 0.089 m
+  V-02: 0.071 m
+  V-06: 0.062 m
+  V-05: 0.045 m
+  V-01: 0.032 m
+  V-03: 0.018 m
+  V-07: 0.011 m</code></pre>
+</div>
+</div>
+<div id="5bac1b6a" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-27T11:25:12.042035Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-27T11:25:12.041901Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-27T11:25:12.045894Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-27T11:25:12.045265Z&quot;}}" data-outputid="bfb645df-9f2f-4330-cf67-7b61c40c18f3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb75"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Gabarito — Exercicio 2 ────────────────────────────────────────────────────</span></span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-4"><a href="#cb75-4" aria-hidden="true" tabindex="-1"></a>vertices <span class="op">=</span> [</span>
+<span id="cb75-5"><a href="#cb75-5" aria-hidden="true" tabindex="-1"></a>    (<span class="fl">685100.0</span>, <span class="fl">7460200.0</span>),</span>
+<span id="cb75-6"><a href="#cb75-6" aria-hidden="true" tabindex="-1"></a>    (<span class="fl">685340.0</span>, <span class="fl">7460200.0</span>),</span>
+<span id="cb75-7"><a href="#cb75-7" aria-hidden="true" tabindex="-1"></a>    (<span class="fl">685340.0</span>, <span class="fl">7459950.0</span>),</span>
+<span id="cb75-8"><a href="#cb75-8" aria-hidden="true" tabindex="-1"></a>    (<span class="fl">685100.0</span>, <span class="fl">7459950.0</span>),</span>
+<span id="cb75-9"><a href="#cb75-9" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb75-10"><a href="#cb75-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-11"><a href="#cb75-11" aria-hidden="true" tabindex="-1"></a><span class="co"># a) e b) Perimetro</span></span>
+<span id="cb75-12"><a href="#cb75-12" aria-hidden="true" tabindex="-1"></a>perimetro <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb75-13"><a href="#cb75-13" aria-hidden="true" tabindex="-1"></a>n <span class="op">=</span> <span class="bu">len</span>(vertices)</span>
+<span id="cb75-14"><a href="#cb75-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb75-15"><a href="#cb75-15" aria-hidden="true" tabindex="-1"></a>    e1, n1 <span class="op">=</span> vertices[i]</span>
+<span id="cb75-16"><a href="#cb75-16" aria-hidden="true" tabindex="-1"></a>    e2, n2 <span class="op">=</span> vertices[(i <span class="op">+</span> <span class="dv">1</span>) <span class="op">%</span> n]   <span class="co"># indice circular</span></span>
+<span id="cb75-17"><a href="#cb75-17" aria-hidden="true" tabindex="-1"></a>    perimetro <span class="op">+=</span> math.sqrt((e2<span class="op">-</span>e1)<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> (n2<span class="op">-</span>n1)<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb75-18"><a href="#cb75-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-19"><a href="#cb75-19" aria-hidden="true" tabindex="-1"></a><span class="co"># c) Area pela formula de Gauss (Shoelace)</span></span>
+<span id="cb75-20"><a href="#cb75-20" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb75-21"><a href="#cb75-21" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb75-22"><a href="#cb75-22" aria-hidden="true" tabindex="-1"></a>    xi   <span class="op">=</span> vertices[i][<span class="dv">0</span>]</span>
+<span id="cb75-23"><a href="#cb75-23" aria-hidden="true" tabindex="-1"></a>    yi_p <span class="op">=</span> vertices[(i <span class="op">+</span> <span class="dv">1</span>) <span class="op">%</span> n][<span class="dv">1</span>]</span>
+<span id="cb75-24"><a href="#cb75-24" aria-hidden="true" tabindex="-1"></a>    yi_m <span class="op">=</span> vertices[(i <span class="op">-</span> <span class="dv">1</span>) <span class="op">%</span> n][<span class="dv">1</span>]</span>
+<span id="cb75-25"><a href="#cb75-25" aria-hidden="true" tabindex="-1"></a>    area <span class="op">+=</span> xi <span class="op">*</span> (yi_p <span class="op">-</span> yi_m)</span>
+<span id="cb75-26"><a href="#cb75-26" aria-hidden="true" tabindex="-1"></a>area <span class="op">=</span> <span class="bu">abs</span>(area) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb75-27"><a href="#cb75-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-28"><a href="#cb75-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Perimetro : </span><span class="sc">{</span>perimetro<span class="sc">:.2f}</span><span class="ss"> m"</span>)</span>
+<span id="cb75-29"><a href="#cb75-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Area      : </span><span class="sc">{</span>area<span class="sc">:.2f}</span><span class="ss"> m2  |  </span><span class="sc">{</span>area<span class="op">/</span><span class="dv">10000</span><span class="sc">:.4f}</span><span class="ss"> ha"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Perimetro : 980.00 m
+Area      : 60000.00 m2  |  6.0000 ha</code></pre>
+</div>
+</div>
+<div id="8e19189b" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-27T11:25:12.047250Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-27T11:25:12.047113Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-27T11:25:12.050344Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-27T11:25:12.049632Z&quot;}}" data-outputid="84c43a39-7a49-41a8-cd9a-0ffe5576773f">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb77"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Gabarito — Exercicio 3 ────────────────────────────────────────────────────</span></span>
+<span id="cb77-2"><a href="#cb77-2" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> {<span class="st">"PT-01"</span>, <span class="st">"PT-02"</span>, <span class="st">"PT-03"</span>, <span class="st">"PT-05"</span>, <span class="st">"PT-07"</span>, <span class="st">"PT-09"</span>}</span>
+<span id="cb77-3"><a href="#cb77-3" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> {<span class="st">"PT-02"</span>, <span class="st">"PT-04"</span>, <span class="st">"PT-05"</span>, <span class="st">"PT-06"</span>, <span class="st">"PT-08"</span>, <span class="st">"PT-10"</span>}</span>
+<span id="cb77-4"><a href="#cb77-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb77-5"><a href="#cb77-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"a) Levantados por AMBOS:"</span>, <span class="bu">sorted</span>(A <span class="op">&amp;</span> B))</span>
+<span id="cb77-6"><a href="#cb77-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"b) Apenas pelo tecnico A:"</span>, <span class="bu">sorted</span>(A <span class="op">-</span> B))</span>
+<span id="cb77-7"><a href="#cb77-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"c) Por apenas UM tecnico:"</span>, <span class="bu">sorted</span>(A <span class="op">^</span> B))</span>
+<span id="cb77-8"><a href="#cb77-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"d) Total de pontos unicos: </span><span class="sc">{</span><span class="bu">len</span>(A <span class="op">|</span> B)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>a) Levantados por AMBOS: ['PT-02', 'PT-05']
+b) Apenas pelo tecnico A: ['PT-01', 'PT-03', 'PT-07', 'PT-09']
+c) Por apenas UM tecnico: ['PT-01', 'PT-03', 'PT-04', 'PT-06', 'PT-07', 'PT-08', 'PT-09', 'PT-10']
+d) Total de pontos unicos: 10</code></pre>
+</div>
+</div>
+<div id="c0cde745" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-27T11:25:12.051608Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-27T11:25:12.051479Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-27T11:25:12.054917Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-27T11:25:12.054160Z&quot;}}" data-outputid="5591630f-804b-4b4b-82a2-352d0cece959">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb79"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Gabarito — Exercicio 4 ────────────────────────────────────────────────────</span></span>
+<span id="cb79-2"><a href="#cb79-2" aria-hidden="true" tabindex="-1"></a>lev <span class="op">=</span> {</span>
+<span id="cb79-3"><a href="#cb79-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"responsavel"</span> : <span class="st">"Carlos Menezes"</span>,</span>
+<span id="cb79-4"><a href="#cb79-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"data"</span>        : <span class="st">"2024-08-20"</span>,</span>
+<span id="cb79-5"><a href="#cb79-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"metodo"</span>      : <span class="st">"poligonal fechada"</span>,</span>
+<span id="cb79-6"><a href="#cb79-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"num_pontos"</span>  : <span class="dv">12</span>,</span>
+<span id="cb79-7"><a href="#cb79-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"precisao_m"</span>  : <span class="fl">0.05</span>,</span>
+<span id="cb79-8"><a href="#cb79-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"datum"</span>       : <span class="st">"SIRGAS2000"</span>,</span>
+<span id="cb79-9"><a href="#cb79-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"aprovado"</span>    : <span class="va">False</span>,</span>
+<span id="cb79-10"><a href="#cb79-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb79-11"><a href="#cb79-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-12"><a href="#cb79-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"=== Levantamento ==="</span>)</span>
+<span id="cb79-13"><a href="#cb79-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> chave, valor <span class="kw">in</span> lev.items():</span>
+<span id="cb79-14"><a href="#cb79-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"  </span><span class="sc">{</span>chave<span class="sc">:&lt;14}</span><span class="ss">: </span><span class="sc">{</span>valor<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb79-15"><a href="#cb79-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-16"><a href="#cb79-16" aria-hidden="true" tabindex="-1"></a><span class="co"># b) Atualizar aprovado</span></span>
+<span id="cb79-17"><a href="#cb79-17" aria-hidden="true" tabindex="-1"></a>lev[<span class="st">"aprovado"</span>] <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb79-18"><a href="#cb79-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"aprovado atualizado para: </span><span class="sc">{</span>lev[<span class="st">'aprovado'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb79-19"><a href="#cb79-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb79-20"><a href="#cb79-20" aria-hidden="true" tabindex="-1"></a><span class="co"># c) Adicionar arquivo</span></span>
+<span id="cb79-21"><a href="#cb79-21" aria-hidden="true" tabindex="-1"></a>lev[<span class="st">"arquivo"</span>] <span class="op">=</span> <span class="st">"levantamento_centro_2024.shp"</span></span>
+<span id="cb79-22"><a href="#cb79-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"  arquivo adicionado     : </span><span class="sc">{</span>lev[<span class="st">'arquivo'</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>=== Levantamento ===
+  responsavel   : Carlos Menezes
+  data          : 2024-08-20
+  metodo        : poligonal fechada
+  num_pontos    : 12
+  precisao_m    : 0.05
+  datum         : SIRGAS2000
+  aprovado      : False
+aprovado atualizado para: True
+  arquivo adicionado     : levantamento_centro_2024.shp</code></pre>
+</div>
+</div>
+<div id="7b754377" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-27T11:25:12.056228Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-27T11:25:12.056096Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-27T11:25:12.303645Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-27T11:25:12.302616Z&quot;}}" data-outputid="e91660c3-ef00-4c85-c5cd-785d3fae6240">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ── Gabarito — Exercicio Final (versao base) ─────────────────────────────────</span></span>
+<span id="cb81-2"><a href="#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math, matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb81-3"><a href="#cb81-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.patches <span class="im">as</span> mpatch</span>
+<span id="cb81-4"><a href="#cb81-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-5"><a href="#cb81-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> shoelace(verts):</span>
+<span id="cb81-6"><a href="#cb81-6" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> <span class="bu">len</span>(verts)</span>
+<span id="cb81-7"><a href="#cb81-7" aria-hidden="true" tabindex="-1"></a>    area <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb81-8"><a href="#cb81-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(n):</span>
+<span id="cb81-9"><a href="#cb81-9" aria-hidden="true" tabindex="-1"></a>        xi   <span class="op">=</span> verts[i][<span class="dv">0</span>]</span>
+<span id="cb81-10"><a href="#cb81-10" aria-hidden="true" tabindex="-1"></a>        yi_p <span class="op">=</span> verts[(i<span class="op">+</span><span class="dv">1</span>) <span class="op">%</span> n][<span class="dv">1</span>]</span>
+<span id="cb81-11"><a href="#cb81-11" aria-hidden="true" tabindex="-1"></a>        yi_m <span class="op">=</span> verts[(i<span class="op">-</span><span class="dv">1</span>) <span class="op">%</span> n][<span class="dv">1</span>]</span>
+<span id="cb81-12"><a href="#cb81-12" aria-hidden="true" tabindex="-1"></a>        area <span class="op">+=</span> xi <span class="op">*</span> (yi_p <span class="op">-</span> yi_m)</span>
+<span id="cb81-13"><a href="#cb81-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">abs</span>(area) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb81-14"><a href="#cb81-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-15"><a href="#cb81-15" aria-hidden="true" tabindex="-1"></a>cadastro <span class="op">=</span> {</span>
+<span id="cb81-16"><a href="#cb81-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">"responsavel"</span>: <span class="st">"Equipe Cartografia UFPR"</span>,</span>
+<span id="cb81-17"><a href="#cb81-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">"data"</span>       : <span class="st">"2024-09-10"</span>,</span>
+<span id="cb81-18"><a href="#cb81-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">"datum"</span>      : <span class="st">"SIRGAS2000"</span>,</span>
+<span id="cb81-19"><a href="#cb81-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"fuso"</span>       : <span class="dv">22</span>,</span>
+<span id="cb81-20"><a href="#cb81-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"municipio"</span>  : <span class="st">"Curitiba"</span>,</span>
+<span id="cb81-21"><a href="#cb81-21" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb81-22"><a href="#cb81-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-23"><a href="#cb81-23" aria-hidden="true" tabindex="-1"></a>lotes <span class="op">=</span> [</span>
+<span id="cb81-24"><a href="#cb81-24" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb81-25"><a href="#cb81-25" aria-hidden="true" tabindex="-1"></a>        <span class="st">"id"</span>          : <span class="st">"LOTE-001"</span>,</span>
+<span id="cb81-26"><a href="#cb81-26" aria-hidden="true" tabindex="-1"></a>        <span class="st">"proprietario"</span>: <span class="st">"Jose Silva"</span>,</span>
+<span id="cb81-27"><a href="#cb81-27" aria-hidden="true" tabindex="-1"></a>        <span class="st">"vertices"</span>    : [(<span class="fl">1000.0</span>,<span class="fl">1000.0</span>),(<span class="fl">1040.0</span>,<span class="fl">1000.0</span>),(<span class="fl">1040.0</span>,<span class="fl">1025.0</span>),(<span class="fl">1000.0</span>,<span class="fl">1025.0</span>)],</span>
+<span id="cb81-28"><a href="#cb81-28" aria-hidden="true" tabindex="-1"></a>        <span class="st">"usos"</span>        : {<span class="st">"residencial"</span>, <span class="st">"garagem"</span>},</span>
+<span id="cb81-29"><a href="#cb81-29" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb81-30"><a href="#cb81-30" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb81-31"><a href="#cb81-31" aria-hidden="true" tabindex="-1"></a>        <span class="st">"id"</span>          : <span class="st">"LOTE-002"</span>,</span>
+<span id="cb81-32"><a href="#cb81-32" aria-hidden="true" tabindex="-1"></a>        <span class="st">"proprietario"</span>: <span class="st">"Maria Oliveira"</span>,</span>
+<span id="cb81-33"><a href="#cb81-33" aria-hidden="true" tabindex="-1"></a>        <span class="st">"vertices"</span>    : [(<span class="fl">1040.0</span>,<span class="fl">1000.0</span>),(<span class="fl">1090.0</span>,<span class="fl">1000.0</span>),(<span class="fl">1090.0</span>,<span class="fl">1030.0</span>),(<span class="fl">1040.0</span>,<span class="fl">1030.0</span>)],</span>
+<span id="cb81-34"><a href="#cb81-34" aria-hidden="true" tabindex="-1"></a>        <span class="st">"usos"</span>        : {<span class="st">"comercial"</span>, <span class="st">"residencial"</span>},</span>
+<span id="cb81-35"><a href="#cb81-35" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb81-36"><a href="#cb81-36" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb81-37"><a href="#cb81-37" aria-hidden="true" tabindex="-1"></a>        <span class="st">"id"</span>          : <span class="st">"LOTE-003"</span>,</span>
+<span id="cb81-38"><a href="#cb81-38" aria-hidden="true" tabindex="-1"></a>        <span class="st">"proprietario"</span>: <span class="st">"Carlos Costa"</span>,</span>
+<span id="cb81-39"><a href="#cb81-39" aria-hidden="true" tabindex="-1"></a>        <span class="st">"vertices"</span>    : [(<span class="fl">1000.0</span>,<span class="fl">1025.0</span>),(<span class="fl">1040.0</span>,<span class="fl">1025.0</span>),(<span class="fl">1090.0</span>,<span class="fl">1030.0</span>),(<span class="fl">1000.0</span>,<span class="fl">1060.0</span>)],</span>
+<span id="cb81-40"><a href="#cb81-40" aria-hidden="true" tabindex="-1"></a>        <span class="st">"usos"</span>        : {<span class="st">"residencial"</span>},</span>
+<span id="cb81-41"><a href="#cb81-41" aria-hidden="true" tabindex="-1"></a>    },</span>
+<span id="cb81-42"><a href="#cb81-42" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb81-43"><a href="#cb81-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-44"><a href="#cb81-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcular areas</span></span>
+<span id="cb81-45"><a href="#cb81-45" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> lote <span class="kw">in</span> lotes:</span>
+<span id="cb81-46"><a href="#cb81-46" aria-hidden="true" tabindex="-1"></a>    lote[<span class="st">"area_m2"</span>] <span class="op">=</span> shoelace(lote[<span class="st">"vertices"</span>])</span>
+<span id="cb81-47"><a href="#cb81-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-48"><a href="#cb81-48" aria-hidden="true" tabindex="-1"></a><span class="co"># Relatorio</span></span>
+<span id="cb81-49"><a href="#cb81-49" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"=== Relatorio Cadastral ==="</span>)</span>
+<span id="cb81-50"><a href="#cb81-50" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Municipio: </span><span class="sc">{</span>cadastro[<span class="st">'municipio'</span>]<span class="sc">}</span><span class="ss">  |  Datum: </span><span class="sc">{</span>cadastro[<span class="st">'datum'</span>]<span class="sc">}</span><span class="ss">  |  Fuso: </span><span class="sc">{</span>cadastro[<span class="st">'fuso'</span>]<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb81-51"><a href="#cb81-51" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb81-52"><a href="#cb81-52" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span><span class="st">'Lote'</span><span class="sc">:&lt;10}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'Proprietario'</span><span class="sc">:&lt;20}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'Area (m2)'</span><span class="sc">:&gt;10}</span><span class="ss"> </span><span class="sc">{</span><span class="st">'Usos'</span><span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb81-53"><a href="#cb81-53" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"-"</span> <span class="op">*</span> <span class="dv">60</span>)</span>
+<span id="cb81-54"><a href="#cb81-54" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> lote <span class="kw">in</span> lotes:</span>
+<span id="cb81-55"><a href="#cb81-55" aria-hidden="true" tabindex="-1"></a>    usos_str <span class="op">=</span> <span class="st">", "</span>.join(<span class="bu">sorted</span>(lote[<span class="st">"usos"</span>]))</span>
+<span id="cb81-56"><a href="#cb81-56" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>lote[<span class="st">'id'</span>]<span class="sc">:&lt;10}</span><span class="ss"> </span><span class="sc">{</span>lote[<span class="st">'proprietario'</span>]<span class="sc">:&lt;20}</span><span class="ss"> </span><span class="sc">{</span>lote[<span class="st">'area_m2'</span>]<span class="sc">:&gt;10.2f}</span><span class="ss">  </span><span class="sc">{</span>usos_str<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb81-57"><a href="#cb81-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-58"><a href="#cb81-58" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>()</span>
+<span id="cb81-59"><a href="#cb81-59" aria-hidden="true" tabindex="-1"></a>total_area <span class="op">=</span> <span class="bu">sum</span>(l[<span class="st">"area_m2"</span>] <span class="cf">for</span> l <span class="kw">in</span> lotes)</span>
+<span id="cb81-60"><a href="#cb81-60" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Area total: </span><span class="sc">{</span>total_area<span class="sc">:.2f}</span><span class="ss"> m2  (</span><span class="sc">{</span>total_area<span class="op">/</span><span class="dv">10000</span><span class="sc">:.4f}</span><span class="ss"> ha)"</span>)</span>
+<span id="cb81-61"><a href="#cb81-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-62"><a href="#cb81-62" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualizacao dos lotes</span></span>
+<span id="cb81-63"><a href="#cb81-63" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb81-64"><a href="#cb81-64" aria-hidden="true" tabindex="-1"></a>cores_lote <span class="op">=</span> [<span class="st">"#3498db"</span>, <span class="st">"#e74c3c"</span>, <span class="st">"#2ecc71"</span>]</span>
+<span id="cb81-65"><a href="#cb81-65" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> lote, cor <span class="kw">in</span> <span class="bu">zip</span>(lotes, cores_lote):</span>
+<span id="cb81-66"><a href="#cb81-66" aria-hidden="true" tabindex="-1"></a>    verts <span class="op">=</span> lote[<span class="st">"vertices"</span>] <span class="op">+</span> [lote[<span class="st">"vertices"</span>][<span class="dv">0</span>]]</span>
+<span id="cb81-67"><a href="#cb81-67" aria-hidden="true" tabindex="-1"></a>    xs <span class="op">=</span> [v[<span class="dv">0</span>] <span class="cf">for</span> v <span class="kw">in</span> verts]</span>
+<span id="cb81-68"><a href="#cb81-68" aria-hidden="true" tabindex="-1"></a>    ys <span class="op">=</span> [v[<span class="dv">1</span>] <span class="cf">for</span> v <span class="kw">in</span> verts]</span>
+<span id="cb81-69"><a href="#cb81-69" aria-hidden="true" tabindex="-1"></a>    ax.fill(xs[:<span class="op">-</span><span class="dv">1</span>], ys[:<span class="op">-</span><span class="dv">1</span>], color<span class="op">=</span>cor, alpha<span class="op">=</span><span class="fl">0.4</span>)</span>
+<span id="cb81-70"><a href="#cb81-70" aria-hidden="true" tabindex="-1"></a>    ax.plot(xs, ys, color<span class="op">=</span>cor, linewidth<span class="op">=</span><span class="fl">1.5</span>)</span>
+<span id="cb81-71"><a href="#cb81-71" aria-hidden="true" tabindex="-1"></a>    cx <span class="op">=</span> <span class="bu">sum</span>(v[<span class="dv">0</span>] <span class="cf">for</span> v <span class="kw">in</span> lote[<span class="st">"vertices"</span>]) <span class="op">/</span> <span class="bu">len</span>(lote[<span class="st">"vertices"</span>])</span>
+<span id="cb81-72"><a href="#cb81-72" aria-hidden="true" tabindex="-1"></a>    cy <span class="op">=</span> <span class="bu">sum</span>(v[<span class="dv">1</span>] <span class="cf">for</span> v <span class="kw">in</span> lote[<span class="st">"vertices"</span>]) <span class="op">/</span> <span class="bu">len</span>(lote[<span class="st">"vertices"</span>])</span>
+<span id="cb81-73"><a href="#cb81-73" aria-hidden="true" tabindex="-1"></a>    ax.text(cx, cy, <span class="ss">f"</span><span class="sc">{</span>lote[<span class="st">'id'</span>]<span class="sc">}</span><span class="ss"> - </span><span class="sc">{</span>lote[<span class="st">'area_m2'</span>]<span class="sc">:.0f}</span><span class="ss"> m2"</span>,</span>
+<span id="cb81-74"><a href="#cb81-74" aria-hidden="true" tabindex="-1"></a>            ha<span class="op">=</span><span class="st">"center"</span>, va<span class="op">=</span><span class="st">"center"</span>, fontsize<span class="op">=</span><span class="dv">8</span>, fontweight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb81-75"><a href="#cb81-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-76"><a href="#cb81-76" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">"Este (m)"</span>)<span class="op">;</span> ax.set_ylabel(<span class="st">"Norte (m)"</span>)</span>
+<span id="cb81-77"><a href="#cb81-77" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">"Planta de Lotes — Levantamento Cadastral"</span>, fontweight<span class="op">=</span><span class="st">"bold"</span>)</span>
+<span id="cb81-78"><a href="#cb81-78" aria-hidden="true" tabindex="-1"></a>ax.set_aspect(<span class="st">"equal"</span>)<span class="op">;</span> ax.grid(<span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb81-79"><a href="#cb81-79" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb81-80"><a href="#cb81-80" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">"/home/sandbox/planta_cadastral.png"</span>, dpi<span class="op">=</span><span class="dv">130</span>, bbox_inches<span class="op">=</span><span class="st">"tight"</span>)</span>
+<span id="cb81-81"><a href="#cb81-81" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb81-82"><a href="#cb81-82" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Planta salva: planta_cadastral.png"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>=== Relatorio Cadastral ===
+Municipio: Curitiba  |  Datum: SIRGAS2000  |  Fuso: 22
+
+Lote       Proprietario          Area (m2) Usos
+------------------------------------------------------------
+LOTE-001   Jose Silva              1000.00  garagem, residencial
+LOTE-002   Maria Oliveira          1500.00  comercial, residencial
+LOTE-003   Carlos Costa            1675.00  residencial
+
+Area total: 4175.00 m2  (0.4175 ha)</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="estruturas_dados_cartografia_aula2_files/figure-html/cell-41-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Planta salva: planta_cadastral.png</code></pre>
+</div>
+</div>
+
+
 </section>
 </section>
 
@@ -2114,6 +2307,18 @@ Estrutura de uma feature:
     }
   });
   </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./logica_programacao_aula1.html" class="pagination-link" aria-label="Aula 1">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Aula 1</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./aula_listas_python_cartografia_aula3.html" class="pagination-link" aria-label="Aula 3">
+        <span class="nav-page-text">Aula 3</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

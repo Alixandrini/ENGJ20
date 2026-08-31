@@ -15,16 +15,16 @@ website:
           text: Aula 1
         - href: estruturas_dados_cartografia_aula2.ipynb
           text: Aula 2
-        - href: aula_listas_python_cartografia_aula3.md
+        - href: Aula 3/Aula_3_aplicando_listas.md
           text: Aula 3  
       - text: Bloco 2
         menu:
         - text: Aula 4
-          href: about.qmd 
+          href: producao.qmd 
       - text: Bloco 3
         menu: 
         - text: Aula 10
-          href: about.qmd
+          href: producao.qmd
       - href: about.qmd
         text: Sobre 
   sidebar:
@@ -36,7 +36,7 @@ website:
         text: Aula 1 - Lógica de Programação
       - href: estruturas_dados_cartografia_aula2.ipynb
         text: Aula 2 - Estruturas Básicas
-      - href: aula_listas_python_cartografia_aula3.md
+      - href: Aula 3/Aula_3_aplicando_listas.md
         text: Aula 3 - Utilizando Listas     
     
 

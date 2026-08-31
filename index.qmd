@@ -1,10 +1,10 @@
 ---
-title: "Programação Aplicada a Engenharia Cartográfica"
+title: "Programação Aplicada à Engenharia Cartográfica"
 ---
 
 ### Proposta Didática e Prática
 
-A disciplina pode ser dividida em **três blocos integrados**:
+A disciplina foi dividida em **três blocos integrados**:
 
 1. **Bloco 1: Fundamentos de Lógica e Estruturas de Dados com Problemas Geodésicos/Cartográficos**
 2. **Bloco 2: Jogos Cartográficos e Ferramentas Interativas CLI/GUI**
@@ -52,7 +52,7 @@ Substituindo os jogos tradicionais (como Jogo da Velha), os projetos em equipe d
 
 ### Bloco 3: Integração do PyQGIS (Stand-alone Scripts e Console)
 
-Conectando diretamente com a abordagem do curso *PyQGIS Masterclass*, este bloco mostra aos alunos como aplicar a lógica aprendida diretamente no ambiente profissional.
+Este bloco mostra aos alunos como aplicar a lógica aprendida diretamente no ambiente profissional.
 
 #### Projetos de Transição Didática:
 

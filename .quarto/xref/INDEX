@@ -13,5 +13,191 @@
   },
   "logica_programacao_aula1.ipynb": {
     "logica_programacao_aula1.html": "7400d2a5"
+  },
+  "producao.qmd": {
+    "producao.html": "35176faa"
+  },
+  "Aula 1/logica_programacao_aula1.ipynb": {
+    "logica_programacao_aula1.html": "968e31d1"
+  },
+  "Aula 1/Poligonal.ipynb": {
+    "Poligonal.html": "9f6e7f4d"
+  },
+  "Aula 1/Poligonal_Gabarito (1).ipynb": {
+    "Poligonal_Gabarito (1).html": "a67d1a21"
+  },
+  "Aula 10/Módulos e Pacotes.ipynb": {
+    "Módulos e Pacotes.html": "d68a0d0a"
+  },
+  "Aula 10/Projeto 2 - Atribuição.ipynb": {
+    "Projeto 2 - Atribuição.html": "44ba508d"
+  },
+  "Aula 10/Projeto 2 - Solução.ipynb": {
+    "Projeto 2 - Solução.html": "f53b3c72"
+  },
+  "Aula 11/All() e any().ipynb": {
+    "All() e any().html": "f96ddef7"
+  },
+  "Aula 11/Enumerate.ipynb": {
+    "Enumerate.html": "413409b5"
+  },
+  "Aula 11/Filter.ipynb": {
+    "Filter.html": "5c760305"
+  },
+  "Aula 11/Map.ipynb": {
+    "Map.html": "cc1545e9"
+  },
+  "Aula 11/Métodos.ipynb": {
+    "Métodos.html": "37c52f91"
+  },
+  "Aula 11/Reduce.ipynb": {
+    "Reduce.html": "867602b8"
+  },
+  "Aula 11/Zip.ipynb": {
+    "Zip.html": "b73bbf93"
+  },
+  "Aula 12/Decoradores - Tema de casa.ipynb": {
+    "Decoradores - Tema de casa.html": "b594b75b"
+  },
+  "Aula 12/Decoradores.ipynb": {
+    "Decoradores.html": "5e7327d6"
+  },
+  "Aula 12/Iteradores e geradores.ipynb": {
+    "Iteradores e geradores.html": "3b5bdcfd"
+  },
+  "Aula 13/Datetime.ipynb": {
+    "Datetime.html": "09b5b0da"
+  },
+  "Aula 13/Dicionários Avançados.ipynb": {
+    "Dicionários Avançados.html": "2cffdd2c"
+  },
+  "Aula 13/Expressões Lambda .ipynb": {
+    "Expressões Lambda .html": "1657acb2"
+  },
+  "Aula 13/Expressões regulares.ipynb": {
+    "Expressões regulares.html": "9afa236e"
+  },
+  "Aula 13/Listas avançadas.ipynb": {
+    "Listas avançadas.html": "2ee828de"
+  },
+  "Aula 13/Módulo de coleções.ipynb": {
+    "Módulo de coleções.html": "d2cf3bfd"
+  },
+  "Aula 13/Python Debugger (pdb).ipynb": {
+    "Python Debugger (pdb).html": "55cd2460"
+  },
+  "Aula 13/Strings avançados.ipynb": {
+    "Strings avançados.html": "273db647"
+  },
+  "Aula 14/Aula 2/gabarito.ipynb": {
+    "gabarito.html": "0768962d"
+  },
+  "Aula 14/Aula 2/inicial.ipynb": {
+    "inicial.html": "5d27306c"
+  },
+  "Aula 14/Aula 3/gabarito.ipynb": {
+    "gabarito.html": "24b2bb72"
+  },
+  "Aula 14/Aula 3/inicial.ipynb": {
+    "inicial.html": "3d581fb1"
+  },
+  "Aula 2/estruturas_dados_cartografia.ipynb": {
+    "estruturas_dados_cartografia.html": "7fe15b95"
+  },
+  "Aula 3/Aula_3_aplicando_listas.md": {
+    "Aula_3_aplicando_listas.html": "fd91765d"
+  },
+  "Aula 3/aula_listas_python_cartografia_aula3.md": {
+    "aula_listas_python_cartografia_aula3.html": "25088f8d"
+  },
+  "Aula 3/Formatação de impressão.ipynb": {
+    "Formatação de impressão.html": "571e5106"
+  },
+  "Aula 3/if,elif e else.ipynb": {
+    "if,elif e else.html": "71d81485"
+  },
+  "Aula 3/Introdução às declarações do Python.ipynb": {
+    "Introdução às declarações do Python.html": "20d2c0b9"
+  },
+  "Aula 3/Jogo_da_Velha_Cleiton.ipynb": {
+    "Jogo_da_Velha_Cleiton.html": "5741b7ee"
+  },
+  "Aula 3/Jogo_da_Velha_Marivaldo_Varjão.ipynb": {
+    "Jogo_da_Velha_Marivaldo_Varjão.html": "342444bb"
+  },
+  "Aula 3/Listas.ipynb": {
+    "Listas.html": "784f2941"
+  },
+  "Aula 3/Números_por_extenso.ipynb": {
+    "Números_por_extenso.html": "c1a7be2d"
+  },
+  "Aula 3/Range-While-For.ipynb": {
+    "Range-While-For.html": "164dccdc"
+  },
+  "Aula 4/Capitulo 3.ipynb": {
+    "Capitulo 3.html": "167fe798"
+  },
+  "Aula 4/Capitulo 4.ipynb": {
+    "Capitulo 4.html": "b20d9b99"
+  },
+  "Aula 4/Capitulo 5.ipynb": {
+    "Capitulo 5.html": "dd702a9d"
+  },
+  "Aula 4/Capítulo 0.ipynb": {
+    "Capítulo 0.html": "6f7b390c"
+  },
+  "Aula 4/Capítulo 1.ipynb": {
+    "Capítulo 1.html": "355be17b"
+  },
+  "Aula 4/Capítulo 2.ipynb": {
+    "Capítulo 2.html": "2e209c81"
+  },
+  "Aula 5/Dicionários.ipynb": {
+    "Dicionários.html": "9f7aad55"
+  },
+  "Aula 5/Lista_de_equipamentos.ipynb": {
+    "Lista_de_equipamentos.html": "5f00f643"
+  },
+  "Aula 5/Sets e Booleanos.ipynb": {
+    "Sets e Booleanos.html": "a37ee240"
+  },
+  "Aula 5/Tuplas.ipynb": {
+    "Tuplas.html": "92cfa37e"
+  },
+  "Aula 6/Compreensão em listas.ipynb": {
+    "Compreensão em listas.html": "a2050306"
+  },
+  "Aula 6/Declarações aninhadas e Escopo.ipynb": {
+    "Declarações aninhadas e Escopo.html": "5d76a2d9"
+  },
+  "Aula 6/Funções e métodos - Trabalho de casa.ipynb": {
+    "Funções e métodos - Trabalho de casa.html": "fd8085cc"
+  },
+  "Aula 6/Funções.ipynb": {
+    "Funções.html": "e07ba855"
+  },
+  "Aula 7/Primeiro projeto -  Notebook de passo a passo.ipynb": {
+    "Primeiro projeto -  Notebook de passo a passo.html": "f31693a4"
+  },
+  "Aula 7/Primeiro projeto - Explicação.ipynb": {
+    "Primeiro projeto - Explicação.html": "90490fef"
+  },
+  "Aula 7/Primeiro projeto - Notebook de resolução.ipynb": {
+    "Primeiro projeto - Notebook de resolução.html": "803595eb"
+  },
+  "Aula 7/Primeiro projeto - Solução avançada.ipynb": {
+    "Primeiro projeto - Solução avançada.html": "0352fa65"
+  },
+  "Aula 8/Programação orientada a objetos - Tema de casa.ipynb": {
+    "Programação orientada a objetos - Tema de casa.html": "c8342ac9"
+  },
+  "Aula 8/Programação orientada a objetos.ipynb": {
+    "Programação orientada a objetos.html": "25305e1c"
+  },
+  "Aula 9/Lidando com erros e exceções.ipynb": {
+    "Lidando com erros e exceções.html": "f9857a84"
+  },
+  "Aula 9/Tema de casa - Tratamento de exceções.ipynb": {
+    "Tema de casa - Tratamento de exceções.html": "1fef4b31"
   }
 }

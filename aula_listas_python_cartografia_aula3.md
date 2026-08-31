@@ -12,7 +12,7 @@ title: Aula 3
 > **Ambiente:** Google Colab / Jupyter Notebook  
 > **Pré-requisitos:** Noções básicas de Python (variáveis, tipos de dados, operadores)
 
-[![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Alixandrini/ENGJ20/blob/main/Aula%203/aula_listas_python_cartografia_aula3.md)
+
 
 ## 📋 Plano de Aula
 
@@ -26,7 +26,7 @@ title: Aula 3
 | 6 | List Comprehension | 15 min |
 | 7 | Exercícios Práticos Aplicados | 20 min |
 
----
+
 
 ## 🎯 1. Introdução e Motivação (10 min)
 
@@ -45,7 +45,7 @@ Em Python, a estrutura mais versátil para armazenar esses conjuntos é a **`lis
 
 > 💡 **Pense:** Uma lista é como uma planilha de Excel com uma única coluna — você pode armazenar vários valores ordenados.
 
----
+
 
 ## 📦 2. Criando e Acessando Listas (15 min)
 
@@ -106,7 +106,7 @@ print("Longitude do 3º ponto:", longitudes[___])
 print("Longitude do último ponto:", longitudes[___])
 ```
 
----
+
 
 ## 🔧 3. Operações Básicas com Listas (15 min)
 
@@ -171,7 +171,7 @@ print(sublista)
 print(___ in altitudes)
 ```
 
----
+
 
 ## 🛠️ 4. Métodos de Listas (20 min)
 
@@ -262,7 +262,7 @@ ___
 print(nivelada)
 ```
 
----
+
 
 ## 🗂️ 5. Listas Aninhadas — Matrizes de Coordenadas (15 min)
 
@@ -342,7 +342,7 @@ media_lat = soma_lat / num_vertices
 print(f"Latitude média: {media_lat}")
 ```
 
----
+
 
 ## ⚡ 6. List Comprehension (15 min)
 
@@ -411,7 +411,7 @@ filtradas = [___ for ___ in ___ if ___]
 print(filtradas)
 ```
 
----
+
 
 ## 🏋️ 7. Exercícios Práticos Aplicados (20 min)
 
@@ -528,7 +528,6 @@ print(f"Amplitude E: {amp_e:.2f} m")
 print(f"Amplitude N: {amp_n:.2f} m")
 ```
 
----
 
 ## 🎓 Desafio Extra (para casa)
 
@@ -559,7 +558,6 @@ area = abs(area) / 2
 print(f"Área do polígono: {area:.2f} m² = {area/10000:.4f} ha")
 ```
 
----
 
 ## 📚 Resumo dos Conceitos
 
@@ -578,7 +576,7 @@ print(f"Área do polígono: {area:.2f} m² = {area/10000:.4f} ha")
 | Máximo/Mínimo | `max()/min()` | `max(coords)` |
 | List comprehension | `[x for x in lista]` | `[x*2 for x in coords]` |
 
----
+
 
 > ✨ **Dica para o Colab:** Use `Ctrl + Enter` para executar uma célula e `Shift + Enter` para executar e ir para a próxima. Adicione células de texto (Markdown) para documentar seu código!
 
